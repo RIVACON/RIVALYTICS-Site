@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  {% comment -%}Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE file in the project root for full license information.{% endcomment -%}
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    {%- if title and _appTitle -%}
+    <title>Connection Manager | </title>
+    <meta name="title" content="Connection Manager | ">
+    {%- else -%}
+      {%- if title or _appTitle -%}
+    <title>Connection Manager</title>
+    <meta name="title" content="Connection Manager">
+      {%- endif -%}
+    {%- endif -%}
+    <meta name="viewport" content="width=device-width">
+    <meta name="generator" content="docfx 2.58.9.0">
+    {%- if _description -%}
+    <meta name="description" content="">
+    {%- endif -%}
+    {%- if _appFaviconPath -%}
+    <link rel="shortcut icon" href="../../">
+    {%- else -%}
+    <link rel="shortcut icon" href="../../favicon.ico">
+    {%- endif -%}
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    {%- if _noindex -%}
+    <meta name="searchOption" content="noindex">
+    {%- endif -%}
+    {%- if _enableSearch -%}
+    <meta property="docfx:rel" content="../../">
+    {%- endif -%}
+    {%- if _enableNewTab -%}
+    <meta property="docfx:newtab" content="true">
+    {%- endif -%}
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="" width="50" height="50">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="connection-manager">Connection Manager</h1>
+
+<h5 id="connecting-external-databases-and-workbooks">Connecting external databases and workbooks</h5>
+<p>With the Connection Manager, it is possible to establish a connection to different types of databases and external workbooks.</p>
+<p><img src="../../images/ConnMan/nav.png" alt="ConnMan_ribbon"><br><em>Figure 1: Navigation to the Connection Manager</em> </p>
+<h2 id="overview">Overview</h2>
+<p><img src="../../images/ConnMan/overview.png" alt="ConnMan_overview"><br><em>Figure 2: Connection Manager Overview</em> </p>
+<p>The &quot;Active Connections&quot; section gives an overview of all connections. 
+To use a data source for a query, reference its CONNECTION ID. 
+Therefore, Connection IDs may not be used twice. </p>
+<h3 id="dummy-connections">Dummy Connections</h3>
+<p>To use worksheet functions, you always have to specify a data source. 
+To still have the option of generating queries, we integrated so-called &quot;dummy connections&quot;. 
+They make it possible to create SQL queries with our generators for any database type without being connected to any source.</p>
+<p>Dummy connections can be accessed by a <code>//</code> combined with the name of a data source type. 
+So instead of choosing <code>Postgres</code> or <code>IMB</code> (see Figure 2), you can create the same query with <code>//PostgreSQL</code> or <code>//DB2</code> as the connection id as in Figure 3. 
+This feature is only available for the worksheet functions: </p>
+<p><img src="../../images/ConnMan/dummy_example.png" alt="ConnMan_dummy_example"><br><em>Figure 3: Example of a dummy connection for PostgreSQL</em> </p>
+<h2 id="manage-connections">Manage Connections</h2>
+<p>There are three buttons for manually editing the set of active connections. </p>
+<h4 id="add">Add</h4>
+<p>If you would like to add a new ODBC connection, please make sure, that you can find it in the &quot;ODBC data sources&quot; manager in windows. 
+After pressing the <code>Add</code> button, you will see another window, which is shown below. 
+You can choose an arbitrary connection id, which will be later used to reference the data source in generators and worksheet functions.</p>
+<p><img src="../../images/ConnMan/add_odbc.png" alt="ConnMan_add_odbc"><br><em>Figure 4: &quot;Add new connection&quot; window for ODBC database</em> </p>
+<p>To add an Excel workbook as a data source, simply choose a connection id and input its path. 
+Note, that the workbook must be saved either locally or in OneDrive. 
+Other Cloud services are not supported in this version of RIVALYTICS.</p>
+<p><img src="../../images/ConnMan/add_excel.png" alt="ConnMan_add_excel"><br><em>Figure 5: &quot;Add new connection&quot; window for Excel database</em> </p>
+<h4 id="edit">Edit</h4>
+<p>To edit a connection, the windows from Figures 3 and 4 will appear again to make modifications. 
+You can edit every connection except for &quot;ThisWorkbook&quot;.</p>
+<h4 id="delete">Delete</h4>
+<p>Once a data source is not necessary anymore, you can select it by clicking on the connection in the &quot;Active connections&quot; overview and pressing the <code>Delete item</code> button to remove it from the list.</p>
+<h4 id="test">Test</h4>
+<p>If a connection cannot be established, the column &quot;Connection Test Successful&quot; in the &quot;Active connections&quot; overview will show <code>FALSE</code>.
+To perform the connection test one again, press the &quot;Test connection&quot; button.</p>
+<h2 id="save-connections">Save Connections</h2>
+<p>With the &quot;Save as&quot; and &quot;Load&quot; buttons, you can manage connections a lot quicker. </p>
+<h4 id="save">Save</h4>
+<p>To save every connection in an encrypted file, you will need to select a path for the file and a password, which has to contain at least:</p>
+<ul>
+<li>8 characters </li>
+<li>one uppercase letter</li>
+<li>one lowercase letter</li>
+<li>one number </li>
+<li>one special character (e.g. <code>!</code>, <code>?</code>, <code>$</code>, <code>&amp;</code> etc.)</li>
+</ul>
+<h4 id="load">Load</h4>
+<p>To load the file with the saved connections, simply select it from your local storage and decrypt it with your chosen password to load the databases.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Created by <a href="https://www.rivacon.com/"><strong>RIVACON</strong></a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

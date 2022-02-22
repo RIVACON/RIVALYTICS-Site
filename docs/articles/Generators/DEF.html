@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  {% comment -%}Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE file in the project root for full license information.{% endcomment -%}
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    {%- if title and _appTitle -%}
+    <title>DEF | </title>
+    <meta name="title" content="DEF | ">
+    {%- else -%}
+      {%- if title or _appTitle -%}
+    <title>DEF</title>
+    <meta name="title" content="DEF">
+      {%- endif -%}
+    {%- endif -%}
+    <meta name="viewport" content="width=device-width">
+    <meta name="generator" content="docfx 2.58.9.0">
+    {%- if _description -%}
+    <meta name="description" content="">
+    {%- endif -%}
+    {%- if _appFaviconPath -%}
+    <link rel="shortcut icon" href="../../">
+    {%- else -%}
+    <link rel="shortcut icon" href="../../favicon.ico">
+    {%- endif -%}
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    {%- if _noindex -%}
+    <meta name="searchOption" content="noindex">
+    {%- endif -%}
+    {%- if _enableSearch -%}
+    <meta property="docfx:rel" content="../../">
+    {%- endif -%}
+    {%- if _enableNewTab -%}
+    <meta property="docfx:newtab" content="true">
+    {%- endif -%}
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="" width="50" height="50">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="def">DEF</h1>
+
+<h5 id="altered-object-definitions">Altered object definitions</h5>
+<p>The DEF generator is used to detect changes in numeric and non-numeric entries: i.e. instances, where there are two tables to check for specific differences.
+It may be used directly as a worksheet function. 
+Rather than doing this, we suggest using the DEF dialog from the menu bar, especially when using this function for the first time.</p>
+<p><img src="../../images/DEF/nav.png" alt="DEF_ribbon"><br><em>Figure 1: location of the DEF ribbon</em> </p>
+<h2 id="example">Example</h2>
+<p>Consider the database of a retailer with two entities: <code>customers2020</code> and <code>customers2021</code>. 
+An attribute of each purchase is the type of membership the customer chose. 
+In this example, we have two tables containing the customer&#39;s settings for different years. 
+We see, that customers 1 and 2 changed their subscriptions. 
+To identify such changes in large databases, we can use DEF.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="../../images/DEF/customers2020.png" alt="DEF_customers2020"></th>
+<th style="text-align:center"><img src="../../images/DEF/customers2021.png" alt="DEF_customers2021"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><em>Table 1: customers2020</em></td>
+<td style="text-align:center"><em>Table 2: customers2021</em></td>
+</tr>
+</tbody>
+</table>
+<p>We may search for changed object definitions in an entire table or a defined subset thereof. 
+For instance, in the above example, we may only care about customer IDs 2 and below. 
+The pattern can account for that via the <code>scope</code> parameter and limit the search for violations to that scope. 
+As a result, only the reference to the customer with ID = 1 and ID = 2 would be reported, as shown below: </p>
+<p><img src="../../images/DEF/result.png" alt="DEF_result"><br><em>Table 3: executed DEF</em> </p>
+<h2 id="settings">Settings</h2>
+<p>The pattern is instantiated via eleven parameters, five related to the source (the outdated table), five to the target (the updated table), and one to the attribute, which will be shown in the resulting table.
+The source and target are each defined via two parameters: </p>
+<ul>
+<li>the <code>source schema</code>  / <code>target schema</code> 
+(providing for databases where identically named tables may exist in different schemas)</li>
+<li>the <code>source table</code> / <code>target table</code></li>
+</ul>
+<p>The third parameter specifies the common key in both tables to be able to link the entries:</p>
+<ul>
+<li>the <code>source link key</code> / <code>target link key</code> defines the key used to link the tables together. 
+When either key is a compound key, the attributes it is composed of are specified as a comma-separated list.</li>
+</ul>
+<p>The fourth parameter sets the attribute, that will be checked for changed definitions:</p>
+<ul>
+<li>the <code>source object</code> / <code>target object</code> defines the attribute, in which changes will be detected</li>
+</ul>
+<p>The fifth parameter defines the scope, i.e. the subset of the source / target tables to be included in the check:</p>
+<ul>
+<li>the <code>source scope</code> / <code>target scope</code> defines the subset of the respective table to be included in the check</li>
+</ul>
+<p>The <code>scope</code> is specified in the syntax of an SQL <code>where</code> clause. 
+It is an optional parameter. 
+When left blank, the scope is the entire table. </p>
+<p>The final parameter lets us input the attribute, which will be shown in the resulting table. 
+In the above example, this parameter is set to <code>name</code> as we have been interested in the name of the customers, who changed their subscription.</p>
+<ul>
+<li>the <code>target attribute</code> defines the attribute, that will be shown in the output</li>
+</ul>
+<p>In the below screenshot, we illustrate how the parameters would be chosen to implement the example check described above.
+We assume, that the data is stored in an Excel workbook &quot;Test_Data.xlsx&quot; with the outdated list of customers stored in the worksheet <code>Customers2020</code> and the updated list stored in a second worksheet named <code>Customers2021</code>. </p>
+<p><img src="../../images/DEF/settings.png" alt="DEF_settings"><br><em>Figure 2: DEF settings</em> </p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Created by <a href="https://www.rivacon.com/"><strong>RIVACON</strong></a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

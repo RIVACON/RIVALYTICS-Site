@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  {% comment -%}Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE file in the project root for full license information.{% endcomment -%}
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    {%- if title and _appTitle -%}
+    <title>FLD | </title>
+    <meta name="title" content="FLD | ">
+    {%- else -%}
+      {%- if title or _appTitle -%}
+    <title>FLD</title>
+    <meta name="title" content="FLD">
+      {%- endif -%}
+    {%- endif -%}
+    <meta name="viewport" content="width=device-width">
+    <meta name="generator" content="docfx 2.58.9.0">
+    {%- if _description -%}
+    <meta name="description" content="">
+    {%- endif -%}
+    {%- if _appFaviconPath -%}
+    <link rel="shortcut icon" href="../../">
+    {%- else -%}
+    <link rel="shortcut icon" href="../../favicon.ico">
+    {%- endif -%}
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    {%- if _noindex -%}
+    <meta name="searchOption" content="noindex">
+    {%- endif -%}
+    {%- if _enableSearch -%}
+    <meta property="docfx:rel" content="../../">
+    {%- endif -%}
+    {%- if _enableNewTab -%}
+    <meta property="docfx:newtab" content="true">
+    {%- endif -%}
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="" width="50" height="50">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="fld">FLD</h1>
+
+<h5 id="detection-of-invalid-or-suspicious-entries">Detection of invalid or suspicious entries</h5>
+<p>It is common for attributes to only allow a limited range of entries. 
+The FLD generator can be used to detect values, that violate these rules or conventions. 
+It may be used directly as a worksheet function. 
+Rather than doing this, we suggest using the FLD dialog from the menu bar, especially when using this function for the first time.</p>
+<p><img src="../../images/FLD/nav.png" alt="FLD_ribbon"><br><em>Figure 1: location of the FLD ribbon</em></p>
+<h2 id="example">Example</h2>
+<p>Consider the database of a retailer with two entities: <code>purchases</code> and <code>customers</code>. 
+An attribute of each purchase is the id of the customer who carried it out. 
+We will look at three types of entries, that we can find with FLD:</p>
+<ul>
+<li>Impossible values: values, that violate strict rules for attributes. 
+Our retailer can only sell items for positive prices. 
+The below example illustrates this violation by a negative value for the attribute PRICE. </li>
+<li>Convention violation: usually only positive values are used as id in tables. 
+In the below example, a negative customer_id is referenced.</li>
+<li>Unusual values: suppose our retailer only sells inexpensive items and purchases are always worth under 100. 
+However, one entry in the below example is a mistake. </li>
+</ul>
+<p><img src="../../images/FLD/purchases.png" alt="FLD_purchases"><br><em>Table 1: purchases</em></p>
+<p>We may perform checks for an entire table or a defined subset thereof. 
+For instance, in the above example, we may only care about purchases made in 2021. 
+The pattern can account for that via the SCOPE parameter and limit the search for violations to that scope. </p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="../../images/FLD/result_1.png" alt="FLD_result_1"></th>
+<th style="text-align:center"><img src="../../images/FLD/result_2.png" alt="FLD_result_2"></th>
+<th style="text-align:center"><img src="../../images/FLD/result_3.png" alt="FLD_result_3"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><em>Table 2: FLD check for prices &lt; 0</em></td>
+<td style="text-align:center"><em>Table 3: FLD check for customer_id &lt; 0</em></td>
+<td style="text-align:center"><em>Table 4: FLD check for prices &gt; 100</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="settings">Settings</h2>
+<p>The pattern is instantiated via five parameters, two related to the selection of the table and three to specify the FLD command.
+The table is defined via: </p>
+<ul>
+<li>the <code>schema</code><br>(providing for databases where identically named tables may exist in different schemas)</li>
+<li>the <code>table</code></li>
+</ul>
+<p>The third parameter specifies which attributes should be shown in the output table:</p>
+<ul>
+<li>the <code>attribute</code><br>(multiple attributes can be used)</li>
+</ul>
+<p>Defining the FLD operation is done with the remaining two parameters </p>
+<ul>
+<li>the <code>check</code> is a statement in SQL syntax to filter the table entries for</li>
+<li>the <code>scope</code> defines the subset of the table to be included in the check</li>
+</ul>
+<p>The <code>scope</code> is an optional parameter.
+When left blank, the entire table will be checked. </p>
+<p>In the below screenshots, we illustrate how the parameters would be chosen to implement the example checks described above.
+We assume, that the data is stored in an Excel workbook &quot;Test_Data.xlsx&quot; with purchases stored in the worksheet &quot;Purchases&quot;. 
+In Figure 1 we check for negative prices, which we call impossible. 
+Figure 2 shows the FLD settings to check for convention violation by negative <code>customer_id</code>.</p>
+<p><img src="../../images/FLD/settings_1.png" alt="FLD_settings_1">
+<em>Figure 2: FLD settings to perform check on price</em></p>
+<p><img src="../../images/FLD/settings_2.png" alt="FLD_settings_2">
+<em>Figure 3: FLD settings to perform check on price</em></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Created by <a href="https://www.rivacon.com/"><strong>RIVACON</strong></a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

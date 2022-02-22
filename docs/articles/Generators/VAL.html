@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  {% comment -%}Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE file in the project root for full license information.{% endcomment -%}
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    {%- if title and _appTitle -%}
+    <title>VAL | </title>
+    <meta name="title" content="VAL | ">
+    {%- else -%}
+      {%- if title or _appTitle -%}
+    <title>VAL</title>
+    <meta name="title" content="VAL">
+      {%- endif -%}
+    {%- endif -%}
+    <meta name="viewport" content="width=device-width">
+    <meta name="generator" content="docfx 2.58.9.0">
+    {%- if _description -%}
+    <meta name="description" content="">
+    {%- endif -%}
+    {%- if _appFaviconPath -%}
+    <link rel="shortcut icon" href="../../">
+    {%- else -%}
+    <link rel="shortcut icon" href="../../favicon.ico">
+    {%- endif -%}
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    {%- if _noindex -%}
+    <meta name="searchOption" content="noindex">
+    {%- endif -%}
+    {%- if _enableSearch -%}
+    <meta property="docfx:rel" content="../../">
+    {%- endif -%}
+    {%- if _enableNewTab -%}
+    <meta property="docfx:newtab" content="true">
+    {%- endif -%}
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="" width="50" height="50">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="val">VAL</h1>
+
+<h5 id="identification-of-significant-quantitative-changes">Identification of significant quantitative changes</h5>
+<p>The VAL generator is used to detect noticeable changes in data. 
+This can be useful for detecting possible errors or outliers.</p>
+<p>The VAL generator may be used directly as a worksheet function. 
+Rather than doing this, we suggest using the VAL dialog from the menu bar, especially when using this function for the first time.</p>
+<p><img src="../../images/VAL/nav.png" alt="VAL_ribbon"><br><em>Figure 1: location of the VAL ribbon</em> </p>
+<h2 id="example">Example</h2>
+<p>Consider the database of a retailer with an entity <code>purchases</code>. 
+Attributes of each purchase include the price paid and the id of the customer who carried it out. 
+We are interested in how much the total purchase value of each customer changed from 2020 to 2021.</p>
+<p><img src="../../images/VAL/purchases.png" alt="VAL_purchases"><br><em>Table 1: purchases</em></p>
+<p>We can analyze four types of metrics:</p>
+<ul>
+<li><code>DELTA</code>, the difference between the new and the old entry</li>
+<li><code>ABSDELTA</code>, the absolute value of <code>DELTA</code></li>
+<li><code>RELDELTA</code>, the percentage change between the new and the old entry</li>
+<li><code>ABSRELDELTA</code>, the absolute value of <code>RELDELTA</code></li>
+</ul>
+<p>For example, if we would like to find every customer, whose purchase value decreased by more than 100, our threshold would be <code>DELTA</code> &lt; -100. 
+In the same way, the threshold <code>ABSDELTA</code> &gt; 100 gives us every customer, whose purchase value changed by more than 100.
+Table 2 shows every customer, whose total purchase value has dropped by more than 100. In addition, each one of the metrics is shown for this customer.</p>
+<p><img src="../../images/VAL/result_1.png" alt="VAL_result_1"><br><em>Table 2: Executed VAL for DELTA &lt; -100</em></p>
+<p>While the query in Table 2 focuses on absolute change, the following one addresses relative change, which can be equally useful. </p>
+<p><img src="../../images/VAL/result_2.png" alt="VAL_result_2"><br><em>Table 3: Executed VAL for ABSRELDELTA &gt; 2</em></p>
+<h2 id="settings">Settings</h2>
+<p>The pattern is instantiated via twelve parameters, five related to the source (the outdated table), five to the target (the updated table), and another two specify the quantitative change we are looking for. 
+It is important, that changes happen from the source to the target table. 
+Therefore, if using VAL for changes in time, the source can be seen as the outdated, and the target as the updated data.
+The source and target are each defined via two parameters: </p>
+<ul>
+<li>the <code>source schema</code> / <code>target schema</code>
+(providing for databases where identically named tables may exist in different schemas)</li>
+<li>the <code>source table</code> / <code>target table</code></li>
+</ul>
+<p>The third parameter is the attribute to group the source and target table by. </p>
+<ul>
+<li>the <code>source group by</code> / <code>target group by</code></li>
+</ul>
+<p>In the above example, both tables are grouped by the <code>customer_id</code>.
+The fourth parameter </p>
+<ul>
+<li>the <code>source object</code> / <code>target object</code> defines the attribute, that we want to apply the check on</li>
+</ul>
+<p>The fifth parameter defines the scope, i.e. the subset of the source / target tables to be included in the check:</p>
+<ul>
+<li>the <code>source scope</code> defines the subset of the updated table to be included in the check </li>
+<li>the <code>target scope</code> defines the subset of the outdated table to be included in the check</li>
+</ul>
+<p>The <code>scope</code> is specified in the syntax of an SQL <code>where</code> clause. 
+It is an optional parameter. 
+When left blank, the scope is the entire table. 
+In the below screenshot, we illustrate how the parameters would be chosen to implement the example from Table 3 described above. 
+We assume, that the data is stored in an Excel workbook &quot;Test_Data.xlsx&quot; with purchases stored in the worksheet <code>Purchases</code>.</p>
+<p><img src="../../images/VAL/settings.png" alt="VAL_settings"><br><em>Figure 1: VAL settings for ABSRELDELTA &gt; 2</em></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Created by <a href="https://www.rivacon.com/"><strong>RIVACON</strong></a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

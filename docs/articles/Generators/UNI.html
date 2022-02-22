@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  {% comment -%}Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE file in the project root for full license information.{% endcomment -%}
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    {%- if title and _appTitle -%}
+    <title>UNI | </title>
+    <meta name="title" content="UNI | ">
+    {%- else -%}
+      {%- if title or _appTitle -%}
+    <title>UNI</title>
+    <meta name="title" content="UNI">
+      {%- endif -%}
+    {%- endif -%}
+    <meta name="viewport" content="width=device-width">
+    <meta name="generator" content="docfx 2.58.9.0">
+    {%- if _description -%}
+    <meta name="description" content="">
+    {%- endif -%}
+    {%- if _appFaviconPath -%}
+    <link rel="shortcut icon" href="../../">
+    {%- else -%}
+    <link rel="shortcut icon" href="../../favicon.ico">
+    {%- endif -%}
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    {%- if _noindex -%}
+    <meta name="searchOption" content="noindex">
+    {%- endif -%}
+    {%- if _enableSearch -%}
+    <meta property="docfx:rel" content="../../">
+    {%- endif -%}
+    {%- if _enableNewTab -%}
+    <meta property="docfx:newtab" content="true">
+    {%- endif -%}
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="" width="50" height="50">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="uni">UNI</h1>
+
+<h5 id="violation-of-uniqueness">Violation of uniqueness</h5>
+<p>The UNI generator is used to detect uniqueness violations: i.e. instances, where an attribute in one table is not unique although it should be. </p>
+<p>The UNI generator may be used directly as a worksheet function. 
+Rather than doing this, we suggest using the UNI dialog from the menu bar, especially when using this function for the first time.</p>
+<p><img src="../../images/UNI/nav.png" alt="UNI_ribbon"><br><em>Figure 1: location of the UNI ribbon</em> </p>
+<h2 id="example-1">Example 1</h2>
+<p>Consider the database of a retailer with two entities: <code>purchases</code> and <code>customers</code>. 
+An attribute of each purchase is the purchase_id, which should serve as a unique identifier. 
+Using one value for multiple entries in the table violates the uniqueness of this attribute. 
+This is demonstrated in the below example. We see, that ids 1 and 3 have been assigned repeatedly. </p>
+<p><img src="../../images/UNI/purchases.png" alt="UNI_purchases"><br><em>Table 1: Purchases</em> </p>
+<p>We may check the uniqueness of an attribute for an entire table or a defined subset thereof. 
+For instance, in the above example, we may only care about purchases made in 2021. 
+The pattern can account for that via the <code>scope</code> parameter and limit the search for violations to that scope. 
+As a result, only the reference to the customer with ID = 5 would be reported, as shown below: </p>
+<p><img src="../../images/UNI/result_1.png" alt="UNI_result_1"><br><em>Table 2: Executed UNI generator for Example 1</em> </p>
+<h2 id="example-2">Example 2</h2>
+<p>We have now seen, how to identify the violation of key uniqueness. 
+However, the UNI generator can also be used to find duplicate entries for specified attributes. 
+Consider the database from Example 1. This time, we would like to know, if any customer made multiple purchases within the same year. 
+So we have to check, whether there are multiple entries, that have matching attributes <code>price</code> and <code>customer_id</code>.
+As we can see in the <code>purchases</code> table, customer 1 made two purchases in 2021. 
+Executing the generated query brings the following result: </p>
+<p><img src="../../images/UNI/result_2.png" alt="UNI_result_2"><br><em>Table 3: Executed UNI generator for Example 2</em> </p>
+<h2 id="settings">Settings</h2>
+<p>The pattern is instantiated via four parameters.
+The table is defined by two parameters: </p>
+<ul>
+<li>the <code>schema</code><br>(providing for databases where identically named tables may exist in different schemas)</li>
+<li>the <code>table</code></li>
+</ul>
+<p>The third parameter specifies the attribute, that is supposed to be checked for uniqueness:</p>
+<ul>
+<li>the <code>unique key</code> is an attribute of the table, that we would like to check for uniqueness</li>
+</ul>
+<p>Composite keys can be chosen by separating every attribute with a comma.
+The fourth parameter defines the scope, i.e. the subset of the table to be included in the check:</p>
+<ul>
+<li>the <code>scope</code> defines the subset of the referencing table to be included in the check</li>
+</ul>
+<p>The <code>scope</code> is specified in the syntax of an SQL <code>where</code> clause.
+It is an optional parameter. When left blank, the scope is the entire table. 
+In the below screenshot, we illustrate how the parameters would be chosen to implement the example check described above. 
+We assume, that the data is stored in an Excel workbook &quot;Test_Data.xlsx&quot; with purchases stored in the worksheet <code>Purchases</code>. </p>
+<p><img src="../../images/UNI/settings_1.png" alt="UNI_settings_1"><br><em>Figure 2: UNI settings for Example 1</em> 
+<img src="../../images/UNI/settings_2.png" alt="UNI_setting_2"><br><em>Figure 3: UNI settings for Example 2</em> </p>
+<h3 id="additional-unique-key-settings">Additional unique key settings</h3>
+<p>It is possible to check entries for uniqueness. 
+So we are no longer looking for duplicate key entries, but rather for whole duplicate table entries.
+To achieve this, there are the following additional specifications for the parameter <code>unique key</code>.</p>
+<ul>
+<li><code>*</code> checks for duplicate table entries</li>
+</ul>
+<p>When using either PostgreSQL, SQLServer, Oracle, or DB2, further commands can be used.
+To run a check on a list of possible composite keys, the input may look like this:</p>
+<ul>
+<li><code>COL1, COL2, ... ?</code> checks all combinations of the columns <code>COLj</code></li>
+<li><code>FIX1, FIX2, ... + SUP1, SUP2, ...</code> checks all combinations of fixed columns <code>FIXj</code> and supplementary columns <code>SUPj</code>, that contain every fixed column. 
+For example, <code>FIX1, FIX2 + SUP1, SUP2</code> will check the combinations <ul>
+<li><code>FIX1, FIX2</code></li>
+<li><code>FIX1, FIX2, SUP1</code></li>
+<li><code>FIX1, FIX2, SUP2</code></li>
+<li><code>FIX1, FIX2, SUP1, SUP2</code>  </li>
+</ul>
+</li>
+</ul>
+<p>Leaving out the supplementary columns lets UNI interpret every non-fixed column as supplementary. 
+So if <code>FIX1, FIX2, SUP1, SUP2</code> is the complete list of a table&#39;s columns, then the expression <code>FIX1, FIX2 +</code> would be a shortcut for <code>FIX1, FIX2 + SUP1, SUP2</code>.</p>
+<ul>
+<li><code>*?</code> checks every possible combination of attributes for duplicates</li>
+</ul>
+<h2 id="execution">Execution</h2>
+<p>Once every compulsory field is filled, clicking the button <code>Generate SQL Statement</code> will create the corresponding query. 
+To execute it, fill in the remaining output details (see [link: Control Panel User Guide]) and press the <code>Execute Query</code> button to generate the result set.</p>
+<p>Figure 2: Control Panel
+Please note that the result set will be empty if no uniqueness violations are detected.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Created by <a href="https://www.rivacon.com/"><strong>RIVACON</strong></a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

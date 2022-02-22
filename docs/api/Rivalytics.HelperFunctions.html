@@ -1,0 +1,1959 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  {% comment -%}Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE file in the project root for full license information.{% endcomment -%}
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    {%- if title and _appTitle -%}
+    <title> | </title>
+    <meta name="title" content=" | ">
+    {%- else -%}
+      {%- if title or _appTitle -%}
+    <title></title>
+    <meta name="title" content="">
+      {%- endif -%}
+    {%- endif -%}
+    <meta name="viewport" content="width=device-width">
+    <meta name="generator" content="docfx 2.58.9.0">
+    {%- if _description -%}
+    <meta name="description" content="">
+    {%- endif -%}
+    {%- if _appFaviconPath -%}
+    <link rel="shortcut icon" href="../">
+    {%- else -%}
+    <link rel="shortcut icon" href="../favicon.ico">
+    {%- endif -%}
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    {%- if _noindex -%}
+    <meta name="searchOption" content="noindex">
+    {%- endif -%}
+    {%- if _enableSearch -%}
+    <meta property="docfx:rel" content="../">
+    {%- endif -%}
+    {%- if _enableNewTab -%}
+    <meta property="docfx:newtab" content="true">
+    {%- endif -%}
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="" width="50" height="50">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Rivalytics.HelperFunctions">
+  
+  
+  <h1 id="Rivalytics_HelperFunctions" data-uid="Rivalytics.HelperFunctions" class="text-break">Class HelperFunctions
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">HelperFunctions</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Rivalytics.html">Rivalytics</a></h6>
+  <h6><strong>Assembly</strong>: Rivalytics.dll</h6>
+  <h5 id="Rivalytics_HelperFunctions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class HelperFunctions</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Rivalytics_HelperFunctions_clearOldData_" data-uid="Rivalytics.HelperFunctions.clearOldData*"></a>
+  <h4 id="Rivalytics_HelperFunctions_clearOldData_Microsoft_Office_Interop_Excel_Worksheet_System_Int32_System_Int32_" data-uid="Rivalytics.HelperFunctions.clearOldData(Microsoft.Office.Interop.Excel.Worksheet,System.Int32,System.Int32)">clearOldData(Worksheet, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Empties every cell to the right of and below the starting cell.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void clearOldData(Worksheet sheet, int startRow, int startCol)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Office.Interop.Excel.Worksheet</span></td>
+        <td><span class="parametername">sheet</span></td>
+        <td><p>The name of the sheet to clear cells in. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">startRow</span></td>
+        <td><p>Row of the starting cell. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">startCol</span></td>
+        <td><p>Column of the starting cell. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_HelperFunctions_CloseAllWindowsOfClosedWB_" data-uid="Rivalytics.HelperFunctions.CloseAllWindowsOfClosedWB*"></a>
+  <h4 id="Rivalytics_HelperFunctions_CloseAllWindowsOfClosedWB_System_String_" data-uid="Rivalytics.HelperFunctions.CloseAllWindowsOfClosedWB(System.String)">CloseAllWindowsOfClosedWB(String)</h4>
+  <div class="markdown level1 summary"><p>Closes every WPF Window for a closing WB. 
+This method must be called by invoking the thread and Window.Application where the Windows were created. 
+In our case this should be Globals.winapp.Dispatcher.Invoke().</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CloseAllWindowsOfClosedWB(string Wb_FullName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">Wb_FullName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_HelperFunctions_columnClean_" data-uid="Rivalytics.HelperFunctions.columnClean*"></a>
+  <h4 id="Rivalytics_HelperFunctions_columnClean_System_Collections_Generic_List_System_String__" data-uid="Rivalytics.HelperFunctions.columnClean(System.Collections.Generic.List{System.String})">columnClean(List&lt;String&gt;)</h4>
+  <div class="markdown level1 summary"><p>Deletes redundant characters from all column names in a list.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;string&gt; columnClean(List&lt;string&gt; columnNames)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">columnNames</span></td>
+        <td><p>List of the column names to be cleaned. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><p>List of column names without redundant characters. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_HelperFunctions_columnClean_" data-uid="Rivalytics.HelperFunctions.columnClean*"></a>
+  <h4 id="Rivalytics_HelperFunctions_columnClean_System_String_" data-uid="Rivalytics.HelperFunctions.columnClean(System.String)">columnClean(String)</h4>
+  <div class="markdown level1 summary"><p>Deletes redundant characters from a column name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string columnClean(string columnName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">columnName</span></td>
+        <td><p>The column name to be cleaned. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>Column name without redundant characters. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_HelperFunctions_columnMod_" data-uid="Rivalytics.HelperFunctions.columnMod*"></a>
+  <h4 id="Rivalytics_HelperFunctions_columnMod_System_Collections_Generic_List_System_String__System_String_" data-uid="Rivalytics.HelperFunctions.columnMod(System.Collections.Generic.List{System.String},System.String)">columnMod(List&lt;String&gt;, String)</h4>
+  <div class="markdown level1 summary"><p>Modifies all columns in a list to be used in queries.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;string&gt; columnMod(List&lt;string&gt; columnNames, string datasourceType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">columnNames</span></td>
+        <td><p>List of the column names to be modified. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">datasourceType</span></td>
+        <td><p>Type of the database system. For example PostgreSQL or Oracle. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><p>List of column names, that will be compatible with the generated queries. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_HelperFunctions_columnMod_" data-uid="Rivalytics.HelperFunctions.columnMod*"></a>
+  <h4 id="Rivalytics_HelperFunctions_columnMod_System_String_System_String_" data-uid="Rivalytics.HelperFunctions.columnMod(System.String,System.String)">columnMod(String, String)</h4>
+  <div class="markdown level1 summary"><p>Modifies the columns in a table to be used in queries.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string columnMod(string columnName, string datasourceType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">columnName</span></td>
+        <td><p>The column name to be modified. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">datasourceType</span></td>
+        <td><p>Type of the database system. For example PostgreSQL or Oracle. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>A column name, that will be compatible with the generated queries. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_HelperFunctions_datasourceTypeMod_" data-uid="Rivalytics.HelperFunctions.datasourceTypeMod*"></a>
+  <h4 id="Rivalytics_HelperFunctions_datasourceTypeMod_System_String_System_Boolean_" data-uid="Rivalytics.HelperFunctions.datasourceTypeMod(System.String,System.Boolean)">datasourceTypeMod(String, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Modifies the database type to be used in queries.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string datasourceTypeMod(string connectionID, bool calledFromExcelCell)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">connectionID</span></td>
+        <td><p>The database connection&apos;s ID. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">calledFromExcelCell</span></td>
+        <td><p>True, if the query is generated in an Excel cell. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>A database type, that will be compatible with generated queries. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_HelperFunctions_genConnectionHandler_" data-uid="Rivalytics.HelperFunctions.genConnectionHandler*"></a>
+  <h4 id="Rivalytics_HelperFunctions_genConnectionHandler_System_String_System_Boolean_" data-uid="Rivalytics.HelperFunctions.genConnectionHandler(System.String,System.Boolean)">genConnectionHandler(String, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DBConnection genConnectionHandler(string connectionID, bool calledFromExcelCell)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">connectionID</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">calledFromExcelCell</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Rivalytics.WPF.Models.DBConnection.html">DBConnection</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_HelperFunctions_GetCallingWorkbook_" data-uid="Rivalytics.HelperFunctions.GetCallingWorkbook*"></a>
+  <h4 id="Rivalytics_HelperFunctions_GetCallingWorkbook" data-uid="Rivalytics.HelperFunctions.GetCallingWorkbook">GetCallingWorkbook()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Workbook GetCallingWorkbook()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Office.Interop.Excel.Workbook</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_HelperFunctions_getCleanColNames_" data-uid="Rivalytics.HelperFunctions.getCleanColNames*"></a>
+  <h4 id="Rivalytics_HelperFunctions_getCleanColNames_Rivalytics_WPF_Models_DBConnection_System_String_" data-uid="Rivalytics.HelperFunctions.getCleanColNames(Rivalytics.WPF.Models.DBConnection,System.String)">getCleanColNames(DBConnection, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;string&gt; getCleanColNames(DBConnection connection, string tableName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Rivalytics.WPF.Models.DBConnection.html">DBConnection</a></td>
+        <td><span class="parametername">connection</span></td>
+        <td><p>Database connection. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">tableName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><p>The list of names (free of any braces etc) of all columns of the given table. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_HelperFunctions_getColNames_" data-uid="Rivalytics.HelperFunctions.getColNames*"></a>
+  <h4 id="Rivalytics_HelperFunctions_getColNames_System_String_System_String_" data-uid="Rivalytics.HelperFunctions.getColNames(System.String,System.String)">getColNames(String, String)</h4>
+  <div class="markdown level1 summary"><p>Get the name of each column, that is inside the workbook&apos;s used range</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;string&gt; getColNames(string sWorkbookName, string sWorksheetName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sWorkbookName</span></td>
+        <td><p>The name of the workbook. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sWorksheetName</span></td>
+        <td><p>The name of the worksheet. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><p>List </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_HelperFunctions_getCubeQuery_" data-uid="Rivalytics.HelperFunctions.getCubeQuery*"></a>
+  <h4 id="Rivalytics_HelperFunctions_getCubeQuery_System_String_System_String_System_Collections_Generic_List_System_String__System_Collections_Generic_List_System_String__" data-uid="Rivalytics.HelperFunctions.getCubeQuery(System.String,System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String})">getCubeQuery(String, String, List&lt;String&gt;, List&lt;String&gt;)</h4>
+  <div class="markdown level1 summary"><p>Creates a query, that is used in the UNI generator.
+It finds every instance of violation of uniqueness in a table.
+Such a violation occurs, when a combination of attributes is supposed to be unique, but is not.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string getCubeQuery(string tableName, string datasourceType, List&lt;string&gt; cubeColNames, List&lt;string&gt; fixedColNames = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">tableName</span></td>
+        <td><p>Name of the table to generate cube query for. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">datasourceType</span></td>
+        <td><p>Type of the database, for example PostgreSQL or Oracle. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">cubeColNames</span></td>
+        <td><p>List of columns to be a part of every checked combination of attributes. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">fixedColNames</span></td>
+        <td><p>List of columns to supplement the cubeColNames list to check every possible combination of attributes. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>Cube Query to detect violation of uniqueness for specific combinations of attributes. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_HelperFunctions_GetExcelColumnName_" data-uid="Rivalytics.HelperFunctions.GetExcelColumnName*"></a>
+  <h4 id="Rivalytics_HelperFunctions_GetExcelColumnName_System_Int32_" data-uid="Rivalytics.HelperFunctions.GetExcelColumnName(System.Int32)">GetExcelColumnName(Int32)</h4>
+  <div class="markdown level1 summary"><p>Converts numbers into Excel column names (0 to A, 27 to AB ...).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetExcelColumnName(int columnNumber)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">columnNumber</span></td>
+        <td><p>Number of column (starting at 0). </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>Name of Excel column as string. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_HelperFunctions_getFilenameFromFullFilename_" data-uid="Rivalytics.HelperFunctions.getFilenameFromFullFilename*"></a>
+  <h4 id="Rivalytics_HelperFunctions_getFilenameFromFullFilename_System_String_" data-uid="Rivalytics.HelperFunctions.getFilenameFromFullFilename(System.String)">getFilenameFromFullFilename(String)</h4>
+  <div class="markdown level1 summary"><p>Exracts filename (&quot;Example.xlsx&quot;) from file path (&quot;C:\Users\Account\Documents\Example.xlsx&quot;)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string getFilenameFromFullFilename(string fullFilename)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">fullFilename</span></td>
+        <td><p>Full name of the file. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The filename only. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_HelperFunctions_getLocalFullName_" data-uid="Rivalytics.HelperFunctions.getLocalFullName*"></a>
+  <h4 id="Rivalytics_HelperFunctions_getLocalFullName_System_String_" data-uid="Rivalytics.HelperFunctions.getLocalFullName(System.String)">getLocalFullName(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string getLocalFullName(string sharepointPathofWorkbook)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sharepointPathofWorkbook</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_HelperFunctions_getModColNames_" data-uid="Rivalytics.HelperFunctions.getModColNames*"></a>
+  <h4 id="Rivalytics_HelperFunctions_getModColNames_Rivalytics_WPF_Models_DBConnection_System_String_" data-uid="Rivalytics.HelperFunctions.getModColNames(Rivalytics.WPF.Models.DBConnection,System.String)">getModColNames(DBConnection, String)</h4>
+  <div class="markdown level1 summary"><p>Returns the list of names of all columns of the given table and modifies it to be compatible with the used datasourceType.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;string&gt; getModColNames(DBConnection connection, string tableName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Rivalytics.WPF.Models.DBConnection.html">DBConnection</a></td>
+        <td><span class="parametername">connection</span></td>
+        <td><p>Database connection to access the database. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">tableName</span></td>
+        <td><p>Full name of the table, including the scheme. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><p>A list of names of all columns of the given table, which is compatible with the used datasourceType. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_HelperFunctions_getSupportedDSNConnections_" data-uid="Rivalytics.HelperFunctions.getSupportedDSNConnections*"></a>
+  <h4 id="Rivalytics_HelperFunctions_getSupportedDSNConnections_System_String_" data-uid="Rivalytics.HelperFunctions.getSupportedDSNConnections(System.String)">getSupportedDSNConnections(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;string&gt; getSupportedDSNConnections(string datasourceType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">datasourceType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_HelperFunctions_getTableNames_" data-uid="Rivalytics.HelperFunctions.getTableNames*"></a>
+  <h4 id="Rivalytics_HelperFunctions_getTableNames_System_String_" data-uid="Rivalytics.HelperFunctions.getTableNames(System.String)">getTableNames(String)</h4>
+  <div class="markdown level1 summary"><p>Extracts the sheets in an Excel Workbook.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Sheets getTableNames(string sWorkbookName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sWorkbookName</span></td>
+        <td><p>Name of the Excel Workbook. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Office.Interop.Excel.Sheets</span></td>
+        <td><p>Excel.Sheets from the Workbook. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_HelperFunctions_getWorkbookIfOpen_" data-uid="Rivalytics.HelperFunctions.getWorkbookIfOpen*"></a>
+  <h4 id="Rivalytics_HelperFunctions_getWorkbookIfOpen_System_String_" data-uid="Rivalytics.HelperFunctions.getWorkbookIfOpen(System.String)">getWorkbookIfOpen(String)</h4>
+  <div class="markdown level1 summary"><p>Check if a workbook with the given name is already open.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Workbook getWorkbookIfOpen(string workbookFullName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">workbookFullName</span></td>
+        <td><p>Full name of the workbook. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Office.Interop.Excel.Workbook</span></td>
+        <td><p>Returns the workbook called workbookFullName, if it is already open. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_HelperFunctions_Intersect_" data-uid="Rivalytics.HelperFunctions.Intersect*"></a>
+  <h4 id="Rivalytics_HelperFunctions_Intersect_System_String_System_String_System_String_System_String_System_String_System_String_System_String_" data-uid="Rivalytics.HelperFunctions.Intersect(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">Intersect(String, String, String, String, String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Creates an SQL query, that outputs the intersection of SourceTable and TargetTable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string Intersect(string sourceScope, string targetScope, string sourceTable, string targetTable, string sourceKey, string targetKey, string datasourceType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sourceScope</span></td>
+        <td><p>Specifies, which entries from the source table will be used. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">targetScope</span></td>
+        <td><p>Specifies, which entries from the target table will be used. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sourceTable</span></td>
+        <td><p>Specifies the source table to be used. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">targetTable</span></td>
+        <td><p>Specifies the target table to be used. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sourceKey</span></td>
+        <td><p>Source key as string for the join to be performed on. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">targetKey</span></td>
+        <td><p>Target key as string for the join to be performed on. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">datasourceType</span></td>
+        <td><p>Type of datasource, for example PostgreSQL or Oracle. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>SQL query, that intersects the TargetTable with the SourceTable. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_HelperFunctions_IsNull_" data-uid="Rivalytics.HelperFunctions.IsNull*"></a>
+  <h4 id="Rivalytics_HelperFunctions_IsNull_System_String_System_String___" data-uid="Rivalytics.HelperFunctions.IsNull(System.String,System.String[])">IsNull(String, String[])</h4>
+  <div class="markdown level1 summary"><p>Creates a part of an SQL query.
+The &quot;is null&quot;  is supposed to come after a &quot;WHERE&quot; to produce set subtraction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string IsNull(string pref, string[] keys)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">pref</span></td>
+        <td><p>Reference of the table, where the keys come from. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">keys</span></td>
+        <td><p>String list of keys to be included. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>Part of an SQL query. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_HelperFunctions_isRecursive_" data-uid="Rivalytics.HelperFunctions.isRecursive*"></a>
+  <h4 id="Rivalytics_HelperFunctions_isRecursive_System_String_System_String_Microsoft_Office_Interop_Excel_Range_" data-uid="Rivalytics.HelperFunctions.isRecursive(System.String,System.String,Microsoft.Office.Interop.Excel.Range)">isRecursive(String, String, Range)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool isRecursive(string query, string callingSheetName, Range callingCell)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">query</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">callingSheetName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.Office.Interop.Excel.Range</span></td>
+        <td><span class="parametername">callingCell</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_HelperFunctions_IsValidCell_" data-uid="Rivalytics.HelperFunctions.IsValidCell*"></a>
+  <h4 id="Rivalytics_HelperFunctions_IsValidCell_System_String_" data-uid="Rivalytics.HelperFunctions.IsValidCell(System.String)">IsValidCell(String)</h4>
+  <div class="markdown level1 summary"><p>Checks if a string is a valid Excel cell. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsValidCell(string inputcell)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">inputcell</span></td>
+        <td><p>The string, that will be checked. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True, if the string is a valid cell. False if not. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_HelperFunctions_IsValidOutputSheet_" data-uid="Rivalytics.HelperFunctions.IsValidOutputSheet*"></a>
+  <h4 id="Rivalytics_HelperFunctions_IsValidOutputSheet_System_String_" data-uid="Rivalytics.HelperFunctions.IsValidOutputSheet(System.String)">IsValidOutputSheet(String)</h4>
+  <div class="markdown level1 summary"><p>Checks, if the name of an Excel sheet is empty or null</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsValidOutputSheet(string selectedSheet)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">selectedSheet</span></td>
+        <td><p>The name of the Excel sheet to be checked. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True, if the name is valid. False if not. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_HelperFunctions_JoinOn_" data-uid="Rivalytics.HelperFunctions.JoinOn*"></a>
+  <h4 id="Rivalytics_HelperFunctions_JoinOn_System_String_System_String_System_String___System_String___" data-uid="Rivalytics.HelperFunctions.JoinOn(System.String,System.String,System.String[],System.String[])">JoinOn(String, String, String[], String[])</h4>
+  <div class="markdown level1 summary"><p>Creates a part of an SQL query.
+It is supposed to specify the attributes, that a &quot;JOIN&quot; be done on.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string JoinOn(string pref1, string pref2, string[] sourceKeys, string[] targetKeys)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">pref1</span></td>
+        <td><p>Reference of the table, where the first set of source keys come from. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">pref2</span></td>
+        <td><p>Reference of the table, where the secon set of target keys come from. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">sourceKeys</span></td>
+        <td><p>String list of source keys to be included. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">targetKeys</span></td>
+        <td><p>String list of target keys to be included. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>Part of an SQL query. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_HelperFunctions_keyMod_" data-uid="Rivalytics.HelperFunctions.keyMod*"></a>
+  <h4 id="Rivalytics_HelperFunctions_keyMod_System_String_System_String_" data-uid="Rivalytics.HelperFunctions.keyMod(System.String,System.String)">keyMod(String, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string[] keyMod(string key, string datasourceType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">datasourceType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_HelperFunctions_keyModString_" data-uid="Rivalytics.HelperFunctions.keyModString*"></a>
+  <h4 id="Rivalytics_HelperFunctions_keyModString_System_String_System_String_" data-uid="Rivalytics.HelperFunctions.keyModString(System.String,System.String)">keyModString(String, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string keyModString(string key, string datasourceType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">datasourceType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_HelperFunctions_queryIncludesWriteStatement_" data-uid="Rivalytics.HelperFunctions.queryIncludesWriteStatement*"></a>
+  <h4 id="Rivalytics_HelperFunctions_queryIncludesWriteStatement_System_String_" data-uid="Rivalytics.HelperFunctions.queryIncludesWriteStatement(System.String)">queryIncludesWriteStatement(String)</h4>
+  <div class="markdown level1 summary"><p>Checks if a SQL select statement would lead to an infinite recursion in Excel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool queryIncludesWriteStatement(string query)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">query</span></td>
+        <td><p>SQL query </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_HelperFunctions_queueMatrixToExcel_" data-uid="Rivalytics.HelperFunctions.queueMatrixToExcel*"></a>
+  <h4 id="Rivalytics_HelperFunctions_queueMatrixToExcel_System_Int32_System_Int32_System_Object_System_Object_System_String_" data-uid="Rivalytics.HelperFunctions.queueMatrixToExcel(System.Int32,System.Int32,System.Object,System.Object,System.String)">queueMatrixToExcel(Int32, Int32, Object, Object, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int queueMatrixToExcel(int numberOutputRows, int numberOutputCols, object oOutputFirstRow, object oOutputData, string Format = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">numberOutputRows</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">numberOutputCols</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">oOutputFirstRow</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">oOutputData</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">Format</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_HelperFunctions_queueVectorToExcel_" data-uid="Rivalytics.HelperFunctions.queueVectorToExcel*"></a>
+  <h4 id="Rivalytics_HelperFunctions_queueVectorToExcel_System_Int32_System_Object_System_String_" data-uid="Rivalytics.HelperFunctions.queueVectorToExcel(System.Int32,System.Object,System.String)">queueVectorToExcel(Int32, Object, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int queueVectorToExcel(int numberOutputRows, object oOutputData, string Format = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">numberOutputRows</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">oOutputData</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">Format</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_HelperFunctions_referenceToRange_" data-uid="Rivalytics.HelperFunctions.referenceToRange*"></a>
+  <h4 id="Rivalytics_HelperFunctions_referenceToRange_ExcelDna_Integration_ExcelReference_" data-uid="Rivalytics.HelperFunctions.referenceToRange(ExcelDna.Integration.ExcelReference)">referenceToRange(ExcelReference)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Range referenceToRange(ExcelReference xlref)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ExcelDna.Integration.ExcelReference</span></td>
+        <td><span class="parametername">xlref</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Office.Interop.Excel.Range</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_HelperFunctions_ReferenceToRange_" data-uid="Rivalytics.HelperFunctions.ReferenceToRange*"></a>
+  <h4 id="Rivalytics_HelperFunctions_ReferenceToRange_ExcelDna_Integration_ExcelReference_" data-uid="Rivalytics.HelperFunctions.ReferenceToRange(ExcelDna.Integration.ExcelReference)">ReferenceToRange(ExcelReference)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Range ReferenceToRange(ExcelReference reference)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ExcelDna.Integration.ExcelReference</span></td>
+        <td><span class="parametername">reference</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Office.Interop.Excel.Range</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_HelperFunctions_scopeMod_" data-uid="Rivalytics.HelperFunctions.scopeMod*"></a>
+  <h4 id="Rivalytics_HelperFunctions_scopeMod_System_String_" data-uid="Rivalytics.HelperFunctions.scopeMod(System.String)">scopeMod(String)</h4>
+  <div class="markdown level1 summary"><p>Modifies the scope to be used in queries.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string scopeMod(string scope)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">scope</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>A scope specification, that will be compatible with generated queries. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_HelperFunctions_SelectWorkbook_" data-uid="Rivalytics.HelperFunctions.SelectWorkbook*"></a>
+  <h4 id="Rivalytics_HelperFunctions_SelectWorkbook" data-uid="Rivalytics.HelperFunctions.SelectWorkbook">SelectWorkbook()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string SelectWorkbook()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_HelperFunctions_SourceNotTarget_" data-uid="Rivalytics.HelperFunctions.SourceNotTarget*"></a>
+  <h4 id="Rivalytics_HelperFunctions_SourceNotTarget_System_String_System_String_System_String_System_String_System_String_System_String_System_String_" data-uid="Rivalytics.HelperFunctions.SourceNotTarget(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">SourceNotTarget(String, String, String, String, String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Creates an SQL query, that performs the set subtraction: SourceTable - TargetTable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string SourceNotTarget(string sourceScope, string targetScope, string sourceTable, string targetTable, string sourceKey, string targetKey, string datasourceType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sourceScope</span></td>
+        <td><p>Specifies, which entries from the source table will be used. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">targetScope</span></td>
+        <td><p>Specifies, which entries from the target table will be used. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sourceTable</span></td>
+        <td><p>Specifies the source table to be used. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">targetTable</span></td>
+        <td><p>Specifies the target table to be used. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sourceKey</span></td>
+        <td><p>Source key as string for the join to be performed on. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">targetKey</span></td>
+        <td><p>Target key as string for the join to be performed on. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">datasourceType</span></td>
+        <td><p>Type of datasource, for example PostgreSQL or Oracle. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>SQL query, that subtracts the TargetTable from the SourceTable. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_HelperFunctions_SplitString_" data-uid="Rivalytics.HelperFunctions.SplitString*"></a>
+  <h4 id="Rivalytics_HelperFunctions_SplitString_System_String_System_Int32_" data-uid="Rivalytics.HelperFunctions.SplitString(System.String,System.Int32)">SplitString(String, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string SplitString(string str, int iSplitSize)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">str</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">iSplitSize</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_HelperFunctions_tableMod_" data-uid="Rivalytics.HelperFunctions.tableMod*"></a>
+  <h4 id="Rivalytics_HelperFunctions_tableMod_System_String_System_String_" data-uid="Rivalytics.HelperFunctions.tableMod(System.String,System.String)">tableMod(String, String)</h4>
+  <div class="markdown level1 summary"><p>Modifies the table name depending on the database system.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string tableMod(string table, string datasourceType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">table</span></td>
+        <td><p>Table name, that was input into a function. Has to be in the form &quot;schema.table&quot;. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">datasourceType</span></td>
+        <td><p>Type of the database system. For example PostgreSQL or Oracle. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>A table name, that will be compatible with generated queries. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_HelperFunctions_TargetNotSource_" data-uid="Rivalytics.HelperFunctions.TargetNotSource*"></a>
+  <h4 id="Rivalytics_HelperFunctions_TargetNotSource_System_String_System_String_System_String_System_String_System_String_System_String_System_String_" data-uid="Rivalytics.HelperFunctions.TargetNotSource(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">TargetNotSource(String, String, String, String, String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Creates an SQL query, that performs the set subtraction: TargetTable - SourceTable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string TargetNotSource(string sourceScope, string targetScope, string sourceTable, string targetTable, string sourceKey, string targetKey, string datasourceType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sourceScope</span></td>
+        <td><p>Specifies, which entries from the source table will be used. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">targetScope</span></td>
+        <td><p>Specifies, which entries from the target table will be used. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sourceTable</span></td>
+        <td><p>Specifies the source table to be used. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">targetTable</span></td>
+        <td><p>Specifies the target table to be used. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sourceKey</span></td>
+        <td><p>Source key as string for the join to be performed on. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">targetKey</span></td>
+        <td><p>Target key as string for the join to be performed on. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">datasourceType</span></td>
+        <td><p>Type of datasource, for example PostgreSQL or Oracle. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>SQL query, that subtracts the SourceTable from the TargetTable. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Created by <a href="https://www.rivacon.com/"><strong>RIVACON</strong></a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

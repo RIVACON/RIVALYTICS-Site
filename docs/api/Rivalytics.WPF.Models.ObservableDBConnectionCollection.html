@@ -1,0 +1,515 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  {% comment -%}Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE file in the project root for full license information.{% endcomment -%}
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    {%- if title and _appTitle -%}
+    <title> | </title>
+    <meta name="title" content=" | ">
+    {%- else -%}
+      {%- if title or _appTitle -%}
+    <title></title>
+    <meta name="title" content="">
+      {%- endif -%}
+    {%- endif -%}
+    <meta name="viewport" content="width=device-width">
+    <meta name="generator" content="docfx 2.58.9.0">
+    {%- if _description -%}
+    <meta name="description" content="">
+    {%- endif -%}
+    {%- if _appFaviconPath -%}
+    <link rel="shortcut icon" href="../">
+    {%- else -%}
+    <link rel="shortcut icon" href="../favicon.ico">
+    {%- endif -%}
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    {%- if _noindex -%}
+    <meta name="searchOption" content="noindex">
+    {%- endif -%}
+    {%- if _enableSearch -%}
+    <meta property="docfx:rel" content="../">
+    {%- endif -%}
+    {%- if _enableNewTab -%}
+    <meta property="docfx:newtab" content="true">
+    {%- endif -%}
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="" width="50" height="50">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Rivalytics.WPF.Models.ObservableDBConnectionCollection">
+  
+  
+  <h1 id="Rivalytics_WPF_Models_ObservableDBConnectionCollection" data-uid="Rivalytics.WPF.Models.ObservableDBConnectionCollection" class="text-break">Class ObservableDBConnectionCollection
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">System.Collections.ObjectModel.Collection</span>&lt;<a class="xref" href="Rivalytics.WPF.Models.DBConnection.html">DBConnection</a>&gt;</div>
+    <div class="level2"><span class="xref">System.Collections.ObjectModel.ObservableCollection</span>&lt;<a class="xref" href="Rivalytics.WPF.Models.DBConnection.html">DBConnection</a>&gt;</div>
+    <div class="level3"><span class="xref">ObservableDBConnectionCollection</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Rivalytics.WPF.Models.DBConnection.html">DBConnection</a>&gt;</div>
+    <div><span class="xref">System.Collections.Generic.ICollection</span>&lt;<a class="xref" href="Rivalytics.WPF.Models.DBConnection.html">DBConnection</a>&gt;</div>
+    <div><span class="xref">System.Collections.IList</span></div>
+    <div><span class="xref">System.Collections.ICollection</span></div>
+    <div><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Rivalytics.WPF.Models.DBConnection.html">DBConnection</a>&gt;</div>
+    <div><span class="xref">System.Collections.Generic.IReadOnlyCollection</span>&lt;<a class="xref" href="Rivalytics.WPF.Models.DBConnection.html">DBConnection</a>&gt;</div>
+    <div><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Rivalytics.WPF.Models.DBConnection.html">DBConnection</a>&gt;</div>
+    <div><span class="xref">System.Collections.IEnumerable</span></div>
+    <div><span class="xref">System.Collections.Specialized.INotifyCollectionChanged</span></div>
+    <div><span class="xref">System.ComponentModel.INotifyPropertyChanged</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.ObservableCollection&lt;Rivalytics.WPF.Models.DBConnection&gt;.Move(System.Int32, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.ObservableCollection&lt;Rivalytics.WPF.Models.DBConnection&gt;.ClearItems()</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.ObservableCollection&lt;Rivalytics.WPF.Models.DBConnection&gt;.RemoveItem(System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.ObservableCollection&lt;Rivalytics.WPF.Models.DBConnection&gt;.InsertItem(System.Int32, Rivalytics.WPF.Models.DBConnection)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.ObservableCollection&lt;Rivalytics.WPF.Models.DBConnection&gt;.SetItem(System.Int32, Rivalytics.WPF.Models.DBConnection)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.ObservableCollection&lt;Rivalytics.WPF.Models.DBConnection&gt;.MoveItem(System.Int32, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.ObservableCollection&lt;Rivalytics.WPF.Models.DBConnection&gt;.OnPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.ObservableCollection&lt;Rivalytics.WPF.Models.DBConnection&gt;.OnCollectionChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.ObservableCollection&lt;Rivalytics.WPF.Models.DBConnection&gt;.BlockReentrancy()</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.ObservableCollection&lt;Rivalytics.WPF.Models.DBConnection&gt;.CheckReentrancy()</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.ObservableCollection&lt;Rivalytics.WPF.Models.DBConnection&gt;.System.ComponentModel.INotifyPropertyChanged.PropertyChanged</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.ObservableCollection&lt;Rivalytics.WPF.Models.DBConnection&gt;.CollectionChanged</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.ObservableCollection&lt;Rivalytics.WPF.Models.DBConnection&gt;.PropertyChanged</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;Rivalytics.WPF.Models.DBConnection&gt;.Clear()</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;Rivalytics.WPF.Models.DBConnection&gt;.CopyTo(Rivalytics.WPF.Models.DBConnection[], System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;Rivalytics.WPF.Models.DBConnection&gt;.Contains(Rivalytics.WPF.Models.DBConnection)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;Rivalytics.WPF.Models.DBConnection&gt;.GetEnumerator()</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;Rivalytics.WPF.Models.DBConnection&gt;.IndexOf(Rivalytics.WPF.Models.DBConnection)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;Rivalytics.WPF.Models.DBConnection&gt;.Insert(System.Int32, Rivalytics.WPF.Models.DBConnection)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;Rivalytics.WPF.Models.DBConnection&gt;.Remove(Rivalytics.WPF.Models.DBConnection)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;Rivalytics.WPF.Models.DBConnection&gt;.RemoveAt(System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;Rivalytics.WPF.Models.DBConnection&gt;.System.Collections.IEnumerable.GetEnumerator()</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;Rivalytics.WPF.Models.DBConnection&gt;.System.Collections.ICollection.CopyTo(System.Array, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;Rivalytics.WPF.Models.DBConnection&gt;.System.Collections.IList.get_Item(System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;Rivalytics.WPF.Models.DBConnection&gt;.System.Collections.IList.set_Item(System.Int32, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;Rivalytics.WPF.Models.DBConnection&gt;.System.Collections.IList.Add(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;Rivalytics.WPF.Models.DBConnection&gt;.System.Collections.IList.Contains(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;Rivalytics.WPF.Models.DBConnection&gt;.System.Collections.IList.IndexOf(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;Rivalytics.WPF.Models.DBConnection&gt;.System.Collections.IList.Insert(System.Int32, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;Rivalytics.WPF.Models.DBConnection&gt;.System.Collections.IList.Remove(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;Rivalytics.WPF.Models.DBConnection&gt;.Count</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;Rivalytics.WPF.Models.DBConnection&gt;.Items</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;Rivalytics.WPF.Models.DBConnection&gt;.Item[System.Int32]</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;Rivalytics.WPF.Models.DBConnection&gt;.System.Collections.Generic.ICollection&lt;Rivalytics.WPF.Models.DBConnection&gt;.IsReadOnly</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;Rivalytics.WPF.Models.DBConnection&gt;.System.Collections.ICollection.IsSynchronized</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;Rivalytics.WPF.Models.DBConnection&gt;.System.Collections.ICollection.SyncRoot</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;Rivalytics.WPF.Models.DBConnection&gt;.System.Collections.IList.Item[System.Int32]</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;Rivalytics.WPF.Models.DBConnection&gt;.System.Collections.IList.IsReadOnly</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;Rivalytics.WPF.Models.DBConnection&gt;.System.Collections.IList.IsFixedSize</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Rivalytics.WPF.Models.html">Rivalytics.WPF.Models</a></h6>
+  <h6><strong>Assembly</strong>: Rivalytics.dll</h6>
+  <h5 id="Rivalytics_WPF_Models_ObservableDBConnectionCollection_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ObservableDBConnectionCollection : ObservableCollection&lt;DBConnection&gt;, IList&lt;DBConnection&gt;, ICollection&lt;DBConnection&gt;, IList, ICollection, IReadOnlyList&lt;DBConnection&gt;, IReadOnlyCollection&lt;DBConnection&gt;, IEnumerable&lt;DBConnection&gt;, IEnumerable, INotifyCollectionChanged, INotifyPropertyChanged</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <a id="Rivalytics_WPF_Models_ObservableDBConnectionCollection__ctor_" data-uid="Rivalytics.WPF.Models.ObservableDBConnectionCollection.#ctor*"></a>
+  <h4 id="Rivalytics_WPF_Models_ObservableDBConnectionCollection__ctor" data-uid="Rivalytics.WPF.Models.ObservableDBConnectionCollection.#ctor">ObservableDBConnectionCollection()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ObservableDBConnectionCollection()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Rivalytics_WPF_Models_ObservableDBConnectionCollection_ConnectionIDs_" data-uid="Rivalytics.WPF.Models.ObservableDBConnectionCollection.ConnectionIDs*"></a>
+  <h4 id="Rivalytics_WPF_Models_ObservableDBConnectionCollection_ConnectionIDs" data-uid="Rivalytics.WPF.Models.ObservableDBConnectionCollection.ConnectionIDs">ConnectionIDs</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;string&gt; ConnectionIDs { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Rivalytics_WPF_Models_ObservableDBConnectionCollection_Add_" data-uid="Rivalytics.WPF.Models.ObservableDBConnectionCollection.Add*"></a>
+  <h4 id="Rivalytics_WPF_Models_ObservableDBConnectionCollection_Add_Rivalytics_WPF_Models_DBConnection_" data-uid="Rivalytics.WPF.Models.ObservableDBConnectionCollection.Add(Rivalytics.WPF.Models.DBConnection)">Add(DBConnection)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Add(DBConnection dbConnection)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Rivalytics.WPF.Models.DBConnection.html">DBConnection</a></td>
+        <td><span class="parametername">dbConnection</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_WPF_Models_ObservableDBConnectionCollection_ContainsConnectionID_" data-uid="Rivalytics.WPF.Models.ObservableDBConnectionCollection.ContainsConnectionID*"></a>
+  <h4 id="Rivalytics_WPF_Models_ObservableDBConnectionCollection_ContainsConnectionID_System_String_" data-uid="Rivalytics.WPF.Models.ObservableDBConnectionCollection.ContainsConnectionID(System.String)">ContainsConnectionID(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ContainsConnectionID(string connectionID)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">connectionID</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_WPF_Models_ObservableDBConnectionCollection_GetById_" data-uid="Rivalytics.WPF.Models.ObservableDBConnectionCollection.GetById*"></a>
+  <h4 id="Rivalytics_WPF_Models_ObservableDBConnectionCollection_GetById_System_String_" data-uid="Rivalytics.WPF.Models.ObservableDBConnectionCollection.GetById(System.String)">GetById(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DBConnection GetById(string connectionID)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">connectionID</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Rivalytics.WPF.Models.DBConnection.html">DBConnection</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_WPF_Models_ObservableDBConnectionCollection_RemoveById_" data-uid="Rivalytics.WPF.Models.ObservableDBConnectionCollection.RemoveById*"></a>
+  <h4 id="Rivalytics_WPF_Models_ObservableDBConnectionCollection_RemoveById_System_String_" data-uid="Rivalytics.WPF.Models.ObservableDBConnectionCollection.RemoveById(System.String)">RemoveById(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DBConnection RemoveById(string connectionID)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">connectionID</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Rivalytics.WPF.Models.DBConnection.html">DBConnection</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.IList</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.ICollection</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.Generic.IReadOnlyList&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.Generic.IReadOnlyCollection&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.IEnumerable</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.Specialized.INotifyCollectionChanged</span>
+  </div>
+  <div>
+      <span class="xref">System.ComponentModel.INotifyPropertyChanged</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Rivalytics.CollectionExtensionMethods.html#Rivalytics_CollectionExtensionMethods_SerializeToString__1_System_Collections_Generic_ICollection___0__">CollectionExtensionMethods.SerializeToString&lt;T&gt;(ICollection&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Rivalytics.CollectionExtensionMethods.html#Rivalytics_CollectionExtensionMethods_DeserializeFromString__1_System_Collections_Generic_ICollection___0__System_String_">CollectionExtensionMethods.DeserializeFromString&lt;T&gt;(ICollection&lt;T&gt;, String)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Created by <a href="https://www.rivacon.com/"><strong>RIVACON</strong></a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

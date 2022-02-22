@@ -1,0 +1,2044 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  {% comment -%}Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE file in the project root for full license information.{% endcomment -%}
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    {%- if title and _appTitle -%}
+    <title> | </title>
+    <meta name="title" content=" | ">
+    {%- else -%}
+      {%- if title or _appTitle -%}
+    <title></title>
+    <meta name="title" content="">
+      {%- endif -%}
+    {%- endif -%}
+    <meta name="viewport" content="width=device-width">
+    <meta name="generator" content="docfx 2.58.9.0">
+    {%- if _description -%}
+    <meta name="description" content="">
+    {%- endif -%}
+    {%- if _appFaviconPath -%}
+    <link rel="shortcut icon" href="../">
+    {%- else -%}
+    <link rel="shortcut icon" href="../favicon.ico">
+    {%- endif -%}
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    {%- if _noindex -%}
+    <meta name="searchOption" content="noindex">
+    {%- endif -%}
+    {%- if _enableSearch -%}
+    <meta property="docfx:rel" content="../">
+    {%- endif -%}
+    {%- if _enableNewTab -%}
+    <meta property="docfx:newtab" content="true">
+    {%- endif -%}
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="" width="50" height="50">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Rivalytics.ExcelWorksheetFunctions">
+  
+  
+  <h1 id="Rivalytics_ExcelWorksheetFunctions" data-uid="Rivalytics.ExcelWorksheetFunctions" class="text-break">Class ExcelWorksheetFunctions
+  </h1>
+  <div class="markdown level0 summary"><p>Defines the SQL Generators and data analytics algorithms as functions for Excel Worksheet cells.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ExcelWorksheetFunctions</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Rivalytics.html">Rivalytics</a></h6>
+  <h6><strong>Assembly</strong>: Rivalytics.dll</h6>
+  <h5 id="Rivalytics_ExcelWorksheetFunctions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class ExcelWorksheetFunctions</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Rivalytics_ExcelWorksheetFunctions_CalendarWeek_" data-uid="Rivalytics.ExcelWorksheetFunctions.CalendarWeek*"></a>
+  <h4 id="Rivalytics_ExcelWorksheetFunctions_CalendarWeek" data-uid="Rivalytics.ExcelWorksheetFunctions.CalendarWeek">CalendarWeek()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ExcelFunction(Name = &quot;CalendarWeek&quot;, HelpTopic = &quot;http://www.rivacon.com/sql-addin-user-guide&quot;, Description = &quot;Current calendar week&quot;)]
+public static object CalendarWeek()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_ExcelWorksheetFunctions_COL_" data-uid="Rivalytics.ExcelWorksheetFunctions.COL*"></a>
+  <h4 id="Rivalytics_ExcelWorksheetFunctions_COL_System_String_System_String_System_String_" data-uid="Rivalytics.ExcelWorksheetFunctions.COL(System.String,System.String,System.String)">COL(String, String, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ExcelFunction(Name = &quot;COL&quot;, HelpTopic = &quot;http://www.rivacon.com/sql-addin-user-guide&quot;, Description = &quot;Returns an overview of a specific table in the connected database. The returned overview contains all column names of the specified table, the number of distinct values, the number of null values, the min value and the max value for each column. &quot;)]
+public static object COL([ExcelArgument(Name = &quot;[ConnectionID]&quot;, Description = &quot;optional; If you set a datasource type, the statement might not be executable.To generate COL statements, the connection has to be established. This parameter can only be used to generate a generic statment to be executed on an Oracle database.&quot;)] string connectionID, [ExcelArgument(Name = &quot;Table_Name&quot;, Description = &quot;Enter the table name.&quot;)] string tableName, [ExcelArgument(Name = &quot;[Schema_Name]&quot;, Description = &quot;optional; Specify the database schema where the table is located. If you are using an Excel Workbook connection, leave this parameter empty.&quot;)] string schema = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">connectionID</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">tableName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">schema</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_ExcelWorksheetFunctions_DaySeries_" data-uid="Rivalytics.ExcelWorksheetFunctions.DaySeries*"></a>
+  <h4 id="Rivalytics_ExcelWorksheetFunctions_DaySeries_System_DateTime_System_DateTime_System_Int32_System_Boolean_" data-uid="Rivalytics.ExcelWorksheetFunctions.DaySeries(System.DateTime,System.DateTime,System.Int32,System.Boolean)">DaySeries(DateTime, DateTime, Int32, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ExcelFunction(Name = &quot;DaySeries&quot;, HelpTopic = &quot;http://www.rivacon.com/sql-addin-user-guide&quot;, Description = &quot;Generates a daily sequence of dates&quot;)]
+public static object DaySeries([ExcelArgument(Name = &quot;startDate&quot;, Description = &quot;start date&quot;)] DateTime startDate, [ExcelArgument(Name = &quot;endDate&quot;, Description = &quot;end date&quot;)] DateTime endDate, [ExcelArgument(Name = &quot;stepSize&quot;, Description = &quot;step size for increments&quot;)] int stepSize, [ExcelArgument(Name = &quot;noWeekends&quot;, Description = &quot;when true, weekends are excluded; optional, default = false&quot;)] bool noWeekends)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="parametername">startDate</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="parametername">endDate</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">stepSize</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">noWeekends</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_ExcelWorksheetFunctions_DaySeries1M_" data-uid="Rivalytics.ExcelWorksheetFunctions.DaySeries1M*"></a>
+  <h4 id="Rivalytics_ExcelWorksheetFunctions_DaySeries1M_System_Int32_System_Int32_System_Boolean_" data-uid="Rivalytics.ExcelWorksheetFunctions.DaySeries1M(System.Int32,System.Int32,System.Boolean)">DaySeries1M(Int32, Int32, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ExcelFunction(Name = &quot;DaySeries1M&quot;, HelpTopic = &quot;http://www.rivacon.com/sql-addin-user-guide&quot;, Description = &quot;Generates a sequence of daily dates extending from the first day until the last day of a given month&quot;)]
+public static object DaySeries1M([ExcelArgument(Name = &quot;year&quot;, Description = &quot;year&quot;)] int year, [ExcelArgument(Name = &quot;month&quot;, Description = &quot;month&quot;)] int month, [ExcelArgument(Name = &quot;noWeekends&quot;, Description = &quot;when true, weekends are excluded; optional, default = false&quot;)] bool noWeekends)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">year</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">month</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">noWeekends</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_ExcelWorksheetFunctions_DaySeries1Y_" data-uid="Rivalytics.ExcelWorksheetFunctions.DaySeries1Y*"></a>
+  <h4 id="Rivalytics_ExcelWorksheetFunctions_DaySeries1Y_System_Int32_System_Int32_System_Boolean_" data-uid="Rivalytics.ExcelWorksheetFunctions.DaySeries1Y(System.Int32,System.Int32,System.Boolean)">DaySeries1Y(Int32, Int32, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ExcelFunction(Name = &quot;DaySeries1Y&quot;, HelpTopic = &quot;http://www.rivacon.com/sql-addin-user-guide&quot;, Description = &quot;Generates a sequence of daily dates extending from the first day to the last day of the year&quot;)]
+public static object DaySeries1Y([ExcelArgument(Name = &quot;year&quot;, Description = &quot;year&quot;)] int year, [ExcelArgument(Name = &quot;month&quot;, Description = &quot;month&quot;)] int month, [ExcelArgument(Name = &quot;noWeekends&quot;, Description = &quot;when true, weekends are excluded; optional, default = false&quot;)] bool noWeekends)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">year</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">month</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">noWeekends</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_ExcelWorksheetFunctions_DaySeriesLastMonth_" data-uid="Rivalytics.ExcelWorksheetFunctions.DaySeriesLastMonth*"></a>
+  <h4 id="Rivalytics_ExcelWorksheetFunctions_DaySeriesLastMonth_System_Boolean_" data-uid="Rivalytics.ExcelWorksheetFunctions.DaySeriesLastMonth(System.Boolean)">DaySeriesLastMonth(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ExcelFunction(Name = &quot;DaySeriesLastMonth&quot;, HelpTopic = &quot;http://www.rivacon.com/sql-addin-user-guide&quot;, Description = &quot;Generates a sequence of daily dates extending from the first day until the last day of the previous month&quot;)]
+public static object DaySeriesLastMonth([ExcelArgument(Name = &quot;noWeekends&quot;, Description = &quot;when true, weekends are excluded; optional, default = false&quot;)] bool noWeekends)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">noWeekends</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_ExcelWorksheetFunctions_DaySeriesLastYear_" data-uid="Rivalytics.ExcelWorksheetFunctions.DaySeriesLastYear*"></a>
+  <h4 id="Rivalytics_ExcelWorksheetFunctions_DaySeriesLastYear_System_Boolean_" data-uid="Rivalytics.ExcelWorksheetFunctions.DaySeriesLastYear(System.Boolean)">DaySeriesLastYear(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ExcelFunction(Name = &quot;DaySeriesLastYear&quot;, HelpTopic = &quot;http://www.rivacon.com/sql-addin-user-guide&quot;, Description = &quot;Generates a sequence of daily dates extending from the first day to the last day of last year&quot;)]
+public static object DaySeriesLastYear([ExcelArgument(Name = &quot;noWeekends&quot;, Description = &quot;when true, weekends are excluded; optional, default = false&quot;)] bool noWeekends)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">noWeekends</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_ExcelWorksheetFunctions_DaySeriesNextMonth_" data-uid="Rivalytics.ExcelWorksheetFunctions.DaySeriesNextMonth*"></a>
+  <h4 id="Rivalytics_ExcelWorksheetFunctions_DaySeriesNextMonth_System_Boolean_" data-uid="Rivalytics.ExcelWorksheetFunctions.DaySeriesNextMonth(System.Boolean)">DaySeriesNextMonth(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ExcelFunction(Name = &quot;DaySeriesNextMonth&quot;, HelpTopic = &quot;http://www.rivacon.com/sql-addin-user-guide&quot;, Description = &quot;Generates a sequence of daily dates extending from the first day until the last day of the following month&quot;)]
+public static object DaySeriesNextMonth([ExcelArgument(Name = &quot;noWeekends&quot;, Description = &quot;when true, weekends are excluded; optional, default = false&quot;)] bool noWeekends)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">noWeekends</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_ExcelWorksheetFunctions_DaySeriesNextYear_" data-uid="Rivalytics.ExcelWorksheetFunctions.DaySeriesNextYear*"></a>
+  <h4 id="Rivalytics_ExcelWorksheetFunctions_DaySeriesNextYear_System_Boolean_" data-uid="Rivalytics.ExcelWorksheetFunctions.DaySeriesNextYear(System.Boolean)">DaySeriesNextYear(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ExcelFunction(Name = &quot;DaySeriesNextYear&quot;, HelpTopic = &quot;http://www.rivacon.com/sql-addin-user-guide&quot;, Description = &quot;Generates a sequence of daily dates extending from the first day to the last day of the year&quot;)]
+public static object DaySeriesNextYear([ExcelArgument(Name = &quot;noWeekends&quot;, Description = &quot;when true, weekends are excluded; optional, default = false&quot;)] bool noWeekends)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">noWeekends</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_ExcelWorksheetFunctions_DaySeriesThisMonth_" data-uid="Rivalytics.ExcelWorksheetFunctions.DaySeriesThisMonth*"></a>
+  <h4 id="Rivalytics_ExcelWorksheetFunctions_DaySeriesThisMonth_System_Boolean_" data-uid="Rivalytics.ExcelWorksheetFunctions.DaySeriesThisMonth(System.Boolean)">DaySeriesThisMonth(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ExcelFunction(Name = &quot;DaySeriesThisMonth&quot;, HelpTopic = &quot;http://www.rivacon.com/sql-addin-user-guide&quot;, Description = &quot;Generates a sequence of daily dates extending from the first day until the last day of the current month&quot;)]
+public static object DaySeriesThisMonth([ExcelArgument(Name = &quot;noWeekends&quot;, Description = &quot;when true, weekends are excluded; optional, default = false&quot;)] bool noWeekends)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">noWeekends</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_ExcelWorksheetFunctions_DaySeriesThisYear_" data-uid="Rivalytics.ExcelWorksheetFunctions.DaySeriesThisYear*"></a>
+  <h4 id="Rivalytics_ExcelWorksheetFunctions_DaySeriesThisYear_System_Boolean_" data-uid="Rivalytics.ExcelWorksheetFunctions.DaySeriesThisYear(System.Boolean)">DaySeriesThisYear(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ExcelFunction(Name = &quot;DaySeriesThisYear&quot;, HelpTopic = &quot;http://www.rivacon.com/sql-addin-user-guide&quot;, Description = &quot;Generates a sequence of daily dates extending from the first day to the last day of this year&quot;)]
+public static object DaySeriesThisYear([ExcelArgument(Name = &quot;noWeekends&quot;, Description = &quot;when true, weekends are excluded; optional, default = false&quot;)] bool noWeekends)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">noWeekends</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_ExcelWorksheetFunctions_DEF_" data-uid="Rivalytics.ExcelWorksheetFunctions.DEF*"></a>
+  <h4 id="Rivalytics_ExcelWorksheetFunctions_DEF_System_String_System_String_System_String_System_String_System_String_System_String_System_String_System_String_System_String_System_String_" data-uid="Rivalytics.ExcelWorksheetFunctions.DEF(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">DEF(String, String, String, String, String, String, String, String, String, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ExcelFunction(Name = &quot;DEF&quot;, HelpTopic = &quot;http://www.rivacon.com/sql-addin-user-guide&quot;, Description = &quot;Identifies changes in attributes of a defined object. Displays old value and changed value. Example: Changes in the object \&quot;instrument currency\&quot; between two dates.&quot;)]
+public static object DEF([ExcelArgument(Name = &quot;[ConnectionID]&quot;, Description = &quot;optional; If you set a datasource type, the statement might not be executable.&quot;)] string connectionID, [ExcelArgument(Name = &quot;Source_Table&quot;, Description = &quot;Choose a source table.&quot;)] string sourceTable, [ExcelArgument(Name = &quot;Target_Table&quot;, Description = &quot;Choose a target table.&quot;)] string targetTable, [ExcelArgument(Name = &quot;Source_Key&quot;, Description = &quot;Specify one or multiple columns in source table that will be used to link it to target table, separated by comma.&quot;)] string sourceLinkKey, [ExcelArgument(Name = &quot;Target_Key&quot;, Description = &quot;Specify one or multiple columns in target table that will be used to link it to source table, separated by comma.&quot;)] string targetLinkKey, [ExcelArgument(Name = &quot;Source_Object_Def&quot;, Description = &quot;Specify one or multiple columns defining the source object that will be compared to the target object.&quot;)] string sourceObjectDef, [ExcelArgument(Name = &quot;Target_Object_Def&quot;, Description = &quot;Specify one or multiple columns defining the target object that will be compared to the source object.&quot;)] string targetObjectDef, [ExcelArgument(Name = &quot;[Target_Attributes]&quot;, Description = &quot;optional; Additional columns to be added to the output matrix, separated by comma.&quot;)] string targetAttribute = &quot;&quot;, [ExcelArgument(Name = &quot;[Source_Scope]&quot;, Description = &quot;optional; Define a scope to restrict the selected table.&quot;)] string sourceScope = &quot;&quot;, [ExcelArgument(Name = &quot;[Target_Scope]&quot;, Description = &quot;optional; Define a scope to restrict the selected table.&quot;)] string targetScope = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">connectionID</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sourceTable</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">targetTable</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sourceLinkKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">targetLinkKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sourceObjectDef</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">targetObjectDef</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">targetAttribute</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sourceScope</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">targetScope</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_ExcelWorksheetFunctions_DistinctTermList_" data-uid="Rivalytics.ExcelWorksheetFunctions.DistinctTermList*"></a>
+  <h4 id="Rivalytics_ExcelWorksheetFunctions_DistinctTermList_System_String_" data-uid="Rivalytics.ExcelWorksheetFunctions.DistinctTermList(System.String)">DistinctTermList(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ExcelFunction(Name = &quot;DistinctTermList&quot;, HelpTopic = &quot;http://www.rivacon.com/sql-addin-user-guide&quot;, Description = &quot;Extracts a list of distinct terms from a string.&quot;)]
+public static object DistinctTermList([ExcelArgument(Name = &quot;s&quot;, Description = &quot;A text&quot;)] string s)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">s</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_ExcelWorksheetFunctions_DocumentTermMatrix_" data-uid="Rivalytics.ExcelWorksheetFunctions.DocumentTermMatrix*"></a>
+  <h4 id="Rivalytics_ExcelWorksheetFunctions_DocumentTermMatrix_System_String_System_String_System_Boolean_" data-uid="Rivalytics.ExcelWorksheetFunctions.DocumentTermMatrix(System.String,System.String,System.Boolean)">DocumentTermMatrix(String, String, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ExcelFunction(Name = &quot;DocumentTermMatrix&quot;, HelpTopic = &quot;http://www.rivacon.com/sql-addin-user-guide&quot;, Description = &quot;Constructs and outputs a document term matrix.&quot;)]
+public static object DocumentTermMatrix([ExcelArgument(Name = &quot;wksName&quot;, Description = &quot;Name of the worksheet with the input data&quot;)] string wksName, [ExcelArgument(Name = &quot;cellRange&quot;, Description = &quot;Excel range, like 'A1:B10'&quot;)] string cellRange, [ExcelArgument(Name = &quot;transpose&quot;, Description = &quot;if true, display transposed matrix (term-document matrix)&quot;)] bool transpose)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">wksName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">cellRange</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">transpose</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_ExcelWorksheetFunctions_dSeries_" data-uid="Rivalytics.ExcelWorksheetFunctions.dSeries*"></a>
+  <h4 id="Rivalytics_ExcelWorksheetFunctions_dSeries_System_DateTime_System_DateTime_System_String_System_Int32_System_Boolean_System_String_" data-uid="Rivalytics.ExcelWorksheetFunctions.dSeries(System.DateTime,System.DateTime,System.String,System.Int32,System.Boolean,System.String)">dSeries(DateTime, DateTime, String, Int32, Boolean, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ExcelFunction(Name = &quot;dSeries&quot;, HelpTopic = &quot;http://www.rivacon.com/sql-addin-user-guide&quot;, Description = &quot;Generates a daily, weekly, monthly, quarterly or annual sequence of dates&quot;)]
+public static object dSeries([ExcelArgument(Name = &quot;startDate&quot;, Description = &quot;start date&quot;)] DateTime startDate, [ExcelArgument(Name = &quot;endDate&quot;, Description = &quot;end date&quot;)] DateTime endDate, [ExcelArgument(Name = &quot;stepUnit&quot;, Description = &quot;unit of increment: D, W, M, Q, Y; optional, default = D&quot;)] string stepUnit, [ExcelArgument(Name = &quot;stepSize&quot;, Description = &quot;step size for increments&quot;)] int stepSize, [ExcelArgument(Name = &quot;noWeekends&quot;, Description = &quot;when true, weekends are excluded; optional, default = false&quot;)] bool noWeekends, [ExcelArgument(Name = &quot;dateRoll&quot;, Description = &quot;on weekends, when exluded, roll to NEXT or to PREV; optional, default = NEXT&quot;)] string dateRoll)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="parametername">startDate</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="parametername">endDate</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">stepUnit</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">stepSize</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">noWeekends</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">dateRoll</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_ExcelWorksheetFunctions_DTM_" data-uid="Rivalytics.ExcelWorksheetFunctions.DTM*"></a>
+  <h4 id="Rivalytics_ExcelWorksheetFunctions_DTM_System_String_System_String_" data-uid="Rivalytics.ExcelWorksheetFunctions.DTM(System.String,System.String)">DTM(String, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object DTM([ExcelArgument(Name = &quot;wksName&quot;, Description = &quot;Name of the worksheet with the input data&quot;)] string wksName, [ExcelArgument(Name = &quot;cellRange&quot;, Description = &quot;Excel range, like 'A1:B10'&quot;)] string cellRange)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">wksName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">cellRange</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_ExcelWorksheetFunctions_FLD_" data-uid="Rivalytics.ExcelWorksheetFunctions.FLD*"></a>
+  <h4 id="Rivalytics_ExcelWorksheetFunctions_FLD_System_String_System_String_System_String_System_String_System_String_" data-uid="Rivalytics.ExcelWorksheetFunctions.FLD(System.String,System.String,System.String,System.String,System.String)">FLD(String, String, String, String, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ExcelFunction(Name = &quot;FLD&quot;, HelpTopic = &quot;http://www.rivacon.com/sql-addin-user-guide&quot;, Description = &quot;Identifies suspicious or invalid values in specified column of a table, e.g. negative stock prices.&quot;)]
+public static object FLD([ExcelArgument(Name = &quot;[connectionID]&quot;, Description = &quot;optional; If you set a datasource type, the statement might not be executable.&quot;)] string connectionID, [ExcelArgument(Name = &quot;Table&quot;, Description = &quot;Choose a table.&quot;)] string table, [ExcelArgument(Name = &quot;Attibute&quot;, Description = &quot;Specify the column to check for suspicious or invalid values.&quot;)] string attribute, [ExcelArgument(Name = &quot;Check&quot;, Description = &quot;Define a check condition using a column from the selected table, e.g. \&quot; PRICE &lt; 0 \&quot; to check whether the column \&quot;PRICE\&quot; has negative values. &quot;)] string check, [ExcelArgument(Name = &quot;[Scope]&quot;, Description = &quot;optional; Define a scope to restrict the selected table.&quot;)] string scope = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">connectionID</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">table</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">attribute</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">check</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">scope</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_ExcelWorksheetFunctions_KMEANS2D_" data-uid="Rivalytics.ExcelWorksheetFunctions.KMEANS2D*"></a>
+  <h4 id="Rivalytics_ExcelWorksheetFunctions_KMEANS2D_System_Double___System_Double___System_Int32_System_Boolean_System_String_System_Boolean_System_Boolean_" data-uid="Rivalytics.ExcelWorksheetFunctions.KMEANS2D(System.Double[],System.Double[],System.Int32,System.Boolean,System.String,System.Boolean,System.Boolean)">KMEANS2D(Double[], Double[], Int32, Boolean, String, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ExcelFunction(Name = &quot;KMEANS2D&quot;, HelpTopic = &quot;http://www.rivacon.com/sql-addin-user-guide&quot;, Description = &quot;Applies k-means clustering on 2D data and can generate an x-y plot.&quot;)]
+public static object KMEANS2D([ExcelArgument(Name = &quot;X-axis&quot;, Description = &quot;Choose a X-axis.&quot;)] double[] column1, [ExcelArgument(Name = &quot;Y-axis&quot;, Description = &quot;Choose a Y-axis.&quot;)] double[] column2, [ExcelArgument(Name = &quot;Number of clusters&quot;, Description = &quot;Specify the desired number of clusters.&quot;)] int numClusters, [ExcelArgument(Name = &quot;[Create plot with clustering results]&quot;, Description = &quot;Set equal to 1 if plot is desired.&quot;)] bool createPlot = false, [ExcelArgument(Name = &quot;[Plot title]&quot;, Description = &quot;Give the plot a title.&quot;)] string charName = &quot;&quot;, [ExcelArgument(Name = &quot;[Show Centroids]&quot;, Description = &quot;Set equal to 1 if the centroid coordinates should be given as an additional ouput.&quot;)] bool showcentroids = false, [ExcelArgument(Name = &quot;[Normalize]&quot;, Description = &quot;Apply Gaussian normalization to input values. If enabled, ensures that a column with larger values doesn't overweigh compared to column with smaller values in the computation.&quot;)] bool normalize = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span>[]</td>
+        <td><span class="parametername">column1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span>[]</td>
+        <td><span class="parametername">column2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">numClusters</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">createPlot</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">charName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">showcentroids</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">normalize</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_ExcelWorksheetFunctions_KMEANS3D_" data-uid="Rivalytics.ExcelWorksheetFunctions.KMEANS3D*"></a>
+  <h4 id="Rivalytics_ExcelWorksheetFunctions_KMEANS3D_System_Double___System_Double___System_Double___System_Int32_System_Boolean_System_String_System_Boolean_System_Boolean_" data-uid="Rivalytics.ExcelWorksheetFunctions.KMEANS3D(System.Double[],System.Double[],System.Double[],System.Int32,System.Boolean,System.String,System.Boolean,System.Boolean)">KMEANS3D(Double[], Double[], Double[], Int32, Boolean, String, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ExcelFunction(Name = &quot;KMEANS3D&quot;, HelpTopic = &quot;http://www.rivacon.com/sql-addin-user-guide&quot;, Description = &quot;Applies k-means clustering using three input columns.&quot;)]
+public static object KMEANS3D([ExcelArgument(Name = &quot;X-axis&quot;, Description = &quot;Choose a X-axis.&quot;)] double[] column1, [ExcelArgument(Name = &quot;Y-axis&quot;, Description = &quot;Choose a Y-axis.&quot;)] double[] column2, [ExcelArgument(Name = &quot;Z-axis&quot;, Description = &quot;Choose a Z-axis.&quot;)] double[] column3, [ExcelArgument(Name = &quot;Number of clusters&quot;, Description = &quot;Specify the desired number of clusters.&quot;)] int numClusters, [ExcelArgument(Name = &quot;[Create plot with clustering results]&quot;, Description = &quot;Set equal to 1 if plot is desired.&quot;)] bool createPlot = false, [ExcelArgument(Name = &quot;[Plot title]&quot;, Description = &quot;Give the plot a title. The default is an empty string.&quot;)] string charName = &quot;&quot;, [ExcelArgument(Name = &quot;[Show Centroids]&quot;, Description = &quot;Set equal to 1 if the centroid coordinates should be given as an additional ouput.&quot;)] bool showcentroids = false, [ExcelArgument(Name = &quot;[Normalize]&quot;, Description = &quot;Apply Gaussian normalization to input values.If enabled, ensures that a column with larger values doesn't overweigh compared to column with smaller values in the computation.&quot;)] bool normalize = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span>[]</td>
+        <td><span class="parametername">column1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span>[]</td>
+        <td><span class="parametername">column2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span>[]</td>
+        <td><span class="parametername">column3</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">numClusters</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">createPlot</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">charName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">showcentroids</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">normalize</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_ExcelWorksheetFunctions_LDist_" data-uid="Rivalytics.ExcelWorksheetFunctions.LDist*"></a>
+  <h4 id="Rivalytics_ExcelWorksheetFunctions_LDist_System_String_System_String_" data-uid="Rivalytics.ExcelWorksheetFunctions.LDist(System.String,System.String)">LDist(String, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ExcelFunction(Name = &quot;LDist&quot;, HelpTopic = &quot;http://www.rivacon.com/sql-addin-user-guide&quot;, Description = &quot;Calculates the distance between two words in terms of the Levenshtein metric.&quot;)]
+public static object LDist([ExcelArgument(Name = &quot;S1&quot;, Description = &quot;String #1.&quot;)] string S1, [ExcelArgument(Name = &quot;S2&quot;, Description = &quot;String #2.&quot;)] string S2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">S1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">S2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_ExcelWorksheetFunctions_MonthSeries_" data-uid="Rivalytics.ExcelWorksheetFunctions.MonthSeries*"></a>
+  <h4 id="Rivalytics_ExcelWorksheetFunctions_MonthSeries_System_DateTime_System_DateTime_System_Int32_System_Boolean_System_String_" data-uid="Rivalytics.ExcelWorksheetFunctions.MonthSeries(System.DateTime,System.DateTime,System.Int32,System.Boolean,System.String)">MonthSeries(DateTime, DateTime, Int32, Boolean, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ExcelFunction(Name = &quot;MonthSeries&quot;, HelpTopic = &quot;http://www.rivacon.com/sql-addin-user-guide&quot;, Description = &quot;Generates a monthly sequence of dates&quot;)]
+public static object MonthSeries([ExcelArgument(Name = &quot;startDate&quot;, Description = &quot;start date&quot;)] DateTime startDate, [ExcelArgument(Name = &quot;endDate&quot;, Description = &quot;end date&quot;)] DateTime endDate, [ExcelArgument(Name = &quot;stepSize&quot;, Description = &quot;step size for increments&quot;)] int stepSize, [ExcelArgument(Name = &quot;noWeekends&quot;, Description = &quot;when true, weekends are excluded; optional, default = false&quot;)] bool noWeekends, [ExcelArgument(Name = &quot;dateRoll&quot;, Description = &quot;on weekends, when exluded, roll to NEXT or to PREV; optional, default = NEXT&quot;)] string dateRoll)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="parametername">startDate</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="parametername">endDate</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">stepSize</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">noWeekends</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">dateRoll</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_ExcelWorksheetFunctions_NaiveBayes_" data-uid="Rivalytics.ExcelWorksheetFunctions.NaiveBayes*"></a>
+  <h4 id="Rivalytics_ExcelWorksheetFunctions_NaiveBayes_System_Object_System_Object_System_Object_System_Boolean_System_Boolean_" data-uid="Rivalytics.ExcelWorksheetFunctions.NaiveBayes(System.Object,System.Object,System.Object,System.Boolean,System.Boolean)">NaiveBayes(Object, Object, Object, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ExcelFunction(Name = &quot;NAIVEBAYES&quot;, HelpTopic = &quot;http://www.rivacon.com/sql-addin-user-guide&quot;, Description = &quot;Generates binary class labels for Test data based on Training data, its Training class labels and naive bayes approach.&quot;)]
+public static object NaiveBayes([ExcelArgument(Name = &quot;Training data&quot;, Description = &quot;Choose a range containing training data (document-term-matrix (DTM) or term-document-matrix (TDM).&quot;, AllowReference = true)] object dtm, [ExcelArgument(Name = &quot;Training classes&quot;, Description = &quot;Class labels of DTM or TDM.&quot;, AllowReference = true)] object InputClass, [ExcelArgument(Name = &quot;Test data&quot;, Description = &quot;Choose a range of test data to be labeled.&quot;, AllowReference = true)] object testdata, [ExcelArgument(Name = &quot;[Training data type]&quot;, Description = &quot;Set to 1 if training data is a term-document-matrix. Default is 0 for document-term-matrix.&quot;, AllowReference = false)] bool inputIsTDM = false, [ExcelArgument(Name = &quot;[PrintScores]&quot;, Description = &quot;Creates additional output containing scores for both classes.&quot;, AllowReference = false)] bool showScores = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">dtm</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">InputClass</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">testdata</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">inputIsTDM</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">showScores</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_ExcelWorksheetFunctions_QuarterSeries_" data-uid="Rivalytics.ExcelWorksheetFunctions.QuarterSeries*"></a>
+  <h4 id="Rivalytics_ExcelWorksheetFunctions_QuarterSeries_System_DateTime_System_DateTime_System_Int32_System_Boolean_System_String_" data-uid="Rivalytics.ExcelWorksheetFunctions.QuarterSeries(System.DateTime,System.DateTime,System.Int32,System.Boolean,System.String)">QuarterSeries(DateTime, DateTime, Int32, Boolean, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ExcelFunction(Name = &quot;QuarterSeries&quot;, HelpTopic = &quot;http://www.rivacon.com/sql-addin-user-guide&quot;, Description = &quot;Generates a quarterly sequence of dates&quot;)]
+public static object QuarterSeries([ExcelArgument(Name = &quot;startDate&quot;, Description = &quot;start date&quot;)] DateTime startDate, [ExcelArgument(Name = &quot;endDate&quot;, Description = &quot;end date&quot;)] DateTime endDate, [ExcelArgument(Name = &quot;stepSize&quot;, Description = &quot;step size for increments&quot;)] int stepSize, [ExcelArgument(Name = &quot;noWeekends&quot;, Description = &quot;when true, weekends are excluded; optional, default = false&quot;)] bool noWeekends, [ExcelArgument(Name = &quot;dateRoll&quot;, Description = &quot;on weekends, when exluded, roll to NEXT or to PREV; optional, default = NEXT&quot;)] string dateRoll)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="parametername">startDate</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="parametername">endDate</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">stepSize</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">noWeekends</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">dateRoll</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_ExcelWorksheetFunctions_REF_" data-uid="Rivalytics.ExcelWorksheetFunctions.REF*"></a>
+  <h4 id="Rivalytics_ExcelWorksheetFunctions_REF_System_String_System_String_System_String_System_String_System_String_System_String_System_String_" data-uid="Rivalytics.ExcelWorksheetFunctions.REF(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">REF(String, String, String, String, String, String, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ExcelFunction(Name = &quot;REF&quot;, HelpTopic = &quot;http://www.rivacon.com/sql-addin-user-guide&quot;, Description = &quot;Checks if a referenced table has all identifiers (composed of one or multiple columns) of the referencing table and lists all that are missing, i.e., those that exist in the referencing table but not in the referenced table. This is, in fact, a special instance of the SET check.&quot;)]
+public static object REF([ExcelArgument(Name = &quot;[connectionID]&quot;, Description = &quot;optional; If you set a datasource type, the statement might not be executable.&quot;)] string connectionID, [ExcelArgument(Name = &quot;Source_Table&quot;, Description = &quot;Choose a source table.&quot;)] string sourceTable, [ExcelArgument(Name = &quot;Target_Table&quot;, Description = &quot;Choose a target table.&quot;)] string targetTable, [ExcelArgument(Name = &quot;Source_Key&quot;, Description = &quot;Specify one or multiple columns in source table that will be used to link it to target table, separated by comma.&quot;)] string sourceKey, [ExcelArgument(Name = &quot;Target_Key&quot;, Description = &quot;Specify one or multiple columns in target table that will be used to link it to source table, separated by comma.&quot;)] string targetKey, [ExcelArgument(Name = &quot;[Source_Scope]&quot;, Description = &quot;optional; Define a scope to restrict the selected table.&quot;)] string sourceScope = &quot;&quot;, [ExcelArgument(Name = &quot;[Target_Scope]&quot;, Description = &quot;optional; Define a scope to restrict the selected table.&quot;)] string targetScope = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">connectionID</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sourceTable</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">targetTable</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sourceKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">targetKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sourceScope</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">targetScope</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_ExcelWorksheetFunctions_SET_" data-uid="Rivalytics.ExcelWorksheetFunctions.SET*"></a>
+  <h4 id="Rivalytics_ExcelWorksheetFunctions_SET_System_String_System_String_System_String_System_String_System_String_System_String_System_String_System_String_" data-uid="Rivalytics.ExcelWorksheetFunctions.SET(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">SET(String, String, String, String, String, String, String, String)</h4>
+  <div class="markdown level1 summary"><p>THIS IS A TEST SUMMARY FOR FCT SET</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ExcelFunction(Name = &quot;SET&quot;, HelpTopic = &quot;http://www.rivacon.com/sql-addin-user-guide&quot;, Description = &quot;Identifies new or omitted values through set comparison between two tables.  Source and target table can be identical but differ in scope; e.g. to compare different business dates.&quot;)]
+public static object SET([ExcelArgument(Name = &quot;[ConnectionID]&quot;, Description = &quot; OUTDATED !! If you set a datasource type, the statement might not be executable.&quot;)] string connectionID, [ExcelArgument(Name = &quot;Source_Table&quot;, Description = &quot;Choose a source table.&quot;)] string sourceTable, [ExcelArgument(Name = &quot;Target_Table&quot;, Description = &quot;Choose a target table.&quot;)] string targetTable, [ExcelArgument(Name = &quot;Source_Key&quot;, Description = &quot;Specify one or multiple columns in source table that will be used to link it to target table, separated by comma.&quot;)] string sourceKey, [ExcelArgument(Name = &quot;Target_Key&quot;, Description = &quot;Specify one or multiple columns in target table that will be used to link it to source table, separated by comma.&quot;)] string targetKey, [ExcelArgument(Name = &quot;Output&quot;, Description = &quot;Select one of the following output sets: ALL, EXCEPT, TARGET, SOURCE, INTERSECT&quot;)] string output, [ExcelArgument(Name = &quot;[Source_Scope]&quot;, Description = &quot;optional; Define criteria to restrict the selected table scope.&quot;)] string sourceScope = &quot;&quot;, [ExcelArgument(Name = &quot;[Target_Scope]&quot;, Description = &quot;optional; Define criteria to restrict the selected table scope.&quot;)] string targetScope = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">connectionID</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sourceTable</span></td>
+        <td><p>test comment for param</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">targetTable</span></td>
+        <td><p>tasrget table param testcomment</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sourceKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">targetKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">output</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sourceScope</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">targetScope</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>object type </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_ExcelWorksheetFunctions_SQL_" data-uid="Rivalytics.ExcelWorksheetFunctions.SQL*"></a>
+  <h4 id="Rivalytics_ExcelWorksheetFunctions_SQL_System_String_System_String_System_Boolean_System_Boolean_" data-uid="Rivalytics.ExcelWorksheetFunctions.SQL(System.String,System.String,System.Boolean,System.Boolean)">SQL(String, String, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ExcelFunction(Name = &quot;SQL&quot;, HelpTopic = &quot;http://www.rivacon.com/sql-addin-user-guide&quot;, Description = &quot;Use SQL Queries to collect or process data from data sources like Excel-, csv-, access-files or external databases&quot;)]
+public static object SQL([ExcelArgument(Name = &quot;ConnectionID&quot;, Description = &quot;BESCHREIBUNG MUSS NOCH ANGEPASST WERDENoptional; If left empty, the selected source in the \&quot;Data Source Manager\&quot; ribbon is used. To use another datasource, you can enter the name of a \&quot;Saved Connection\&quot;, the full path of an Excel-/csv-file or \&quot;this\&quot; as keyword for the current workbook.&quot;)] string connectionID, [ExcelArgument(Name = &quot;SQL_Query&quot;, Description = &quot;Enter read-only SQL queries. Some help on the syntax is provided in the user guide.&quot;)] string sQuery, [ExcelArgument(Name = &quot;[Hide_Column_Header]&quot;, Description = &quot;optional; 1 to turn Column Header on&quot;)] bool hideHeader = false, [ExcelArgument(Name = &quot;[Clear_Old_Data]&quot;, Description = &quot;optional; 1 to clear contents and formatting; 2 to clear contents only; 3 to clear formatting only&quot;)] bool clearOldData = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">connectionID</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sQuery</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">hideHeader</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">clearOldData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_ExcelWorksheetFunctions_TBL_" data-uid="Rivalytics.ExcelWorksheetFunctions.TBL*"></a>
+  <h4 id="Rivalytics_ExcelWorksheetFunctions_TBL_System_String_System_String_" data-uid="Rivalytics.ExcelWorksheetFunctions.TBL(System.String,System.String)">TBL(String, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ExcelFunction(Name = &quot;TBL&quot;, HelpTopic = &quot;http://www.rivacon.com/sql-addin-user-guide&quot;, Description = &quot;Returns an overview of all (accessible) tables in a database. For each existing table, the returned overview contains the schema name, table name, the number of rows and the number of columns in that table.&quot;)]
+public static object TBL([ExcelArgument(Name = &quot;[ConnectionID]&quot;, Description = &quot;OUTDATED!!!optional; If you set a datasource type, the statement might not be executable.&quot;)] string connectionID, [ExcelArgument(Name = &quot;[Schema_Name]&quot;, Description = &quot;optional; Restrict the output to a specific schema of the connected database.&quot;)] string owner = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">connectionID</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">owner</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_ExcelWorksheetFunctions_TDM_" data-uid="Rivalytics.ExcelWorksheetFunctions.TDM*"></a>
+  <h4 id="Rivalytics_ExcelWorksheetFunctions_TDM_System_String_System_String_" data-uid="Rivalytics.ExcelWorksheetFunctions.TDM(System.String,System.String)">TDM(String, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object TDM([ExcelArgument(Name = &quot;wksName&quot;, Description = &quot;Name of the worksheet with the input data&quot;)] string wksName, [ExcelArgument(Name = &quot;cellRange&quot;, Description = &quot;Excel range, like 'A1:B10'&quot;)] string cellRange)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">wksName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">cellRange</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_ExcelWorksheetFunctions_TermFrequencies_" data-uid="Rivalytics.ExcelWorksheetFunctions.TermFrequencies*"></a>
+  <h4 id="Rivalytics_ExcelWorksheetFunctions_TermFrequencies_System_String_" data-uid="Rivalytics.ExcelWorksheetFunctions.TermFrequencies(System.String)">TermFrequencies(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ExcelFunction(Name = &quot;TermFrequencies&quot;, HelpTopic = &quot;http://www.rivacon.com/sql-addin-user-guide&quot;, Description = &quot;Extracts a list of distinct terms from a string and counts and displays their respective frequencies.&quot;)]
+public static object TermFrequencies([ExcelArgument(Name = &quot;s&quot;, Description = &quot;A text&quot;)] string s)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">s</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_ExcelWorksheetFunctions_TermList_" data-uid="Rivalytics.ExcelWorksheetFunctions.TermList*"></a>
+  <h4 id="Rivalytics_ExcelWorksheetFunctions_TermList_System_String_" data-uid="Rivalytics.ExcelWorksheetFunctions.TermList(System.String)">TermList(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ExcelFunction(Name = &quot;TermList&quot;, HelpTopic = &quot;http://www.rivacon.com/sql-addin-user-guide&quot;, Description = &quot;Extracts a list of terms from a string.&quot;)]
+public static object TermList([ExcelArgument(Name = &quot;s&quot;, Description = &quot;A text&quot;)] string s)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">s</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_ExcelWorksheetFunctions_UNI_" data-uid="Rivalytics.ExcelWorksheetFunctions.UNI*"></a>
+  <h4 id="Rivalytics_ExcelWorksheetFunctions_UNI_System_String_System_String_System_String_System_String_" data-uid="Rivalytics.ExcelWorksheetFunctions.UNI(System.String,System.String,System.String,System.String)">UNI(String, String, String, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ExcelFunction(Name = &quot;UNI&quot;, HelpTopic = &quot;http://www.rivacon.com/sql-addin-user-guide&quot;, Description = &quot;Checks if an identifier (composed of one or multiple columns) is unique. Displays non-unique instances, including the number of repetitions&quot;)]
+public static object UNI([ExcelArgument(Name = &quot;[connectionID]&quot;, Description = &quot;optional; If you set a datasource type, the statement might not be executable.&quot;)] string connectionID, [ExcelArgument(Name = &quot;Table_Name&quot;, Description = &quot;Choose a table.&quot;)] string tableName, [ExcelArgument(Name = &quot;Unique_Key&quot;, Description = &quot;Specify one or multiple columns that define the unique key, separated by comma.Specify \&quot;*\&quot; to use all columns of the table.&quot;)] string uniqueKey, [ExcelArgument(Name = &quot;[Scope]&quot;, Description = &quot;optional; Define a scope to restrict the selected table.&quot;)] string scope = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">connectionID</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">tableName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">uniqueKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">scope</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_ExcelWorksheetFunctions_VAL_" data-uid="Rivalytics.ExcelWorksheetFunctions.VAL*"></a>
+  <h4 id="Rivalytics_ExcelWorksheetFunctions_VAL_System_String_System_String_System_String_System_String_System_String_System_String_System_String_System_String_System_String_System_String_System_String_" data-uid="Rivalytics.ExcelWorksheetFunctions.VAL(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">VAL(String, String, String, String, String, String, String, String, String, String, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ExcelFunction(Name = &quot;VAL&quot;, HelpTopic = &quot;http://www.rivacon.com/sql-addin-user-guide&quot;, Description = &quot;Identifies changes violating a defined (relative and / or absolute) acceptance threshold between two objects, e.g. a suspicious change in account balances between two business days.&quot;)]
+public static object VAL([ExcelArgument(Name = &quot;[connectionID]&quot;, Description = &quot;optional; If you set a datasource type, the statement might not be executable.&quot;)] string connectionID, [ExcelArgument(Name = &quot;Source_Table&quot;, Description = &quot;Choose a source table.&quot;)] string sourceTable, [ExcelArgument(Name = &quot;Target_Table&quot;, Description = &quot;Choose a target table.&quot;)] string targetTable, [ExcelArgument(Name = &quot;Source_Object_Def&quot;, Description = &quot;Specify one or multiple columns defining the source object that will be compared to the target object.&quot;)] string sourceObjectDef, [ExcelArgument(Name = &quot;Target_Object_Def&quot;, Description = &quot;Specify one or multiple columns defining the target object that will be compared to the source object.&quot;)] string targetObjectDef, [ExcelArgument(Name = &quot;Source_Group_By&quot;, Description = &quot;Specify the grouping criteria for the source object.&quot;)] string sourceGroupBy, [ExcelArgument(Name = &quot;Target_Group_By&quot;, Description = &quot;Specify the grouping criteria for the target object.&quot;)] string targetGroupBy, [ExcelArgument(Name = &quot;Agg_Operator&quot;, Description = &quot;Select one of the following aggregators: SUM, AVG, MIN, MAX, COUNT, STDEV&quot;)] string aggOpr, [ExcelArgument(Name = &quot;Threshold&quot;, Description = &quot;Select one or multiple of the follwing threshold types: Delta, AbsDelta, RelDelta, AbsRelDelta. Example: \&quot;AbsDelta &gt; 2000 AND AbsRelDelta &gt; 1\&quot; . &quot;)] string threshold, [ExcelArgument(Name = &quot;[Source_Scope]&quot;, Description = &quot;optional; Define a scope to restrict the selected table.&quot;)] string sourceScope = &quot;&quot;, [ExcelArgument(Name = &quot;[Target_Scope]&quot;, Description = &quot;optional; Define a scope to restrict the selected table.&quot;)] string targetScope = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">connectionID</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sourceTable</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">targetTable</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sourceObjectDef</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">targetObjectDef</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sourceGroupBy</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">targetGroupBy</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">aggOpr</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">threshold</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sourceScope</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">targetScope</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_ExcelWorksheetFunctions_wbInfo_" data-uid="Rivalytics.ExcelWorksheetFunctions.wbInfo*"></a>
+  <h4 id="Rivalytics_ExcelWorksheetFunctions_wbInfo" data-uid="Rivalytics.ExcelWorksheetFunctions.wbInfo">wbInfo()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ExcelFunction(Name = &quot;wbInfo&quot;, HelpTopic = &quot;http://www.rivacon.com/sql-addin-user-guide&quot;, Description = &quot;Returns information on the active workbook and its worksheets.&quot;)]
+public static object wbInfo()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_ExcelWorksheetFunctions_WeekSeries_" data-uid="Rivalytics.ExcelWorksheetFunctions.WeekSeries*"></a>
+  <h4 id="Rivalytics_ExcelWorksheetFunctions_WeekSeries_System_DateTime_System_DateTime_System_Int32_System_Boolean_System_String_" data-uid="Rivalytics.ExcelWorksheetFunctions.WeekSeries(System.DateTime,System.DateTime,System.Int32,System.Boolean,System.String)">WeekSeries(DateTime, DateTime, Int32, Boolean, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ExcelFunction(Name = &quot;WeekSeries&quot;, HelpTopic = &quot;http://www.rivacon.com/sql-addin-user-guide&quot;, Description = &quot;Generates a weekly sequence of dates&quot;)]
+public static object WeekSeries([ExcelArgument(Name = &quot;startDate&quot;, Description = &quot;start date&quot;)] DateTime startDate, [ExcelArgument(Name = &quot;endDate&quot;, Description = &quot;end date&quot;)] DateTime endDate, [ExcelArgument(Name = &quot;stepSize&quot;, Description = &quot;step size for increments&quot;)] int stepSize, [ExcelArgument(Name = &quot;noWeekends&quot;, Description = &quot;when true, weekends are excluded; optional, default = false&quot;)] bool noWeekends, [ExcelArgument(Name = &quot;dateRoll&quot;, Description = &quot;on weekends, when exluded, roll to NEXT or to PREV; optional, default = NEXT&quot;)] string dateRoll)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="parametername">startDate</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="parametername">endDate</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">stepSize</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">noWeekends</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">dateRoll</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Rivalytics_ExcelWorksheetFunctions_YearSeries_" data-uid="Rivalytics.ExcelWorksheetFunctions.YearSeries*"></a>
+  <h4 id="Rivalytics_ExcelWorksheetFunctions_YearSeries_System_DateTime_System_DateTime_System_Int32_System_Boolean_System_String_" data-uid="Rivalytics.ExcelWorksheetFunctions.YearSeries(System.DateTime,System.DateTime,System.Int32,System.Boolean,System.String)">YearSeries(DateTime, DateTime, Int32, Boolean, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ExcelFunction(Name = &quot;YearSeries&quot;, HelpTopic = &quot;http://www.rivacon.com/sql-addin-user-guide&quot;, Description = &quot;Generates a daily, weekly, monthly, quarterly or annual sequence of dates&quot;)]
+public static object YearSeries([ExcelArgument(Name = &quot;startDate&quot;, Description = &quot;start date&quot;)] DateTime startDate, [ExcelArgument(Name = &quot;endDate&quot;, Description = &quot;end date&quot;)] DateTime endDate, [ExcelArgument(Name = &quot;stepSize&quot;, Description = &quot;step size for increments&quot;)] int stepSize, [ExcelArgument(Name = &quot;noWeekends&quot;, Description = &quot;when true, weekends are excluded; optional, default = false&quot;)] bool noWeekends, [ExcelArgument(Name = &quot;dateRoll&quot;, Description = &quot;on weekends, when exluded, roll to NEXT or to PREV; optional, default = NEXT&quot;)] string dateRoll)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="parametername">startDate</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="parametername">endDate</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">stepSize</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">noWeekends</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">dateRoll</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Created by <a href="https://www.rivacon.com/"><strong>RIVACON</strong></a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

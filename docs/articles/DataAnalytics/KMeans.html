@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  {% comment -%}Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE file in the project root for full license information.{% endcomment -%}
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    {%- if title and _appTitle -%}
+    <title>K Means Clustering | </title>
+    <meta name="title" content="K Means Clustering | ">
+    {%- else -%}
+      {%- if title or _appTitle -%}
+    <title>K Means Clustering</title>
+    <meta name="title" content="K Means Clustering">
+      {%- endif -%}
+    {%- endif -%}
+    <meta name="viewport" content="width=device-width">
+    <meta name="generator" content="docfx 2.58.9.0">
+    {%- if _description -%}
+    <meta name="description" content="">
+    {%- endif -%}
+    {%- if _appFaviconPath -%}
+    <link rel="shortcut icon" href="../../">
+    {%- else -%}
+    <link rel="shortcut icon" href="../../favicon.ico">
+    {%- endif -%}
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    {%- if _noindex -%}
+    <meta name="searchOption" content="noindex">
+    {%- endif -%}
+    {%- if _enableSearch -%}
+    <meta property="docfx:rel" content="../../">
+    {%- endif -%}
+    {%- if _enableNewTab -%}
+    <meta property="docfx:newtab" content="true">
+    {%- endif -%}
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="" width="50" height="50">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="k-means-clustering">K Means Clustering</h1>
+
+<h5 id="locate-clusters-in-data">Locate clusters in data</h5>
+<p>As the name suggests, clustering algorithms attempt to divide data points into a given number of clusters based on their coordinates.
+RIVALYTICS supports one such algorithm called &quot;K means clustering&quot;.
+K Means Clustering can only be applied to numeric data.</p>
+<h2 id="example">Example</h2>
+<p>The Iris flower data set might be the best-known data set.
+It contains measurements of the length and width of three subspecies of the Iris flower.
+Those are called Setosa, Virginica and Versicolor.</p>
+<p>For each subspecies, the data contains 50 data points with four measurements each. 
+As seen in Figure 1 below, the attributes are <code>sepal length</code>, <code>sepal width</code>, <code>petal length</code>, <code>petal width</code>.
+We now want to find clusters of data points to then classify the data points into three different species.</p>
+<p><img src="../../images/KMeans/Iris_head.png" alt="Iris_head"><br><em>Figure 1: First entries of the Iris flower data set</em></p>
+<p>We will try to divide the data into three clusters using the K Means Clustering algorithm.</p>
+<p>For this, we specify the data range as <code>A2:D151</code>, as this is the range of Excel cells, in which the measurements lie in.
+As we would want the algorithm to tell us the species solely based on the data measurements, we set the number of clusters to three.
+For simplicity, we can leave out the centroids by entering a 0.
+Transformations are especially useful when the absolute variation in coordinates differs greatly between attributes. 
+For us, this is not the case and we can enter another 0.
+As for the number of steps, the default is set to 50, which should be sufficient for most cases.
+Nonetheless, if the amount of data is little, choosing more steps will not noticeably slow down the calculation.
+Therefore, the number of steps is set to 500.
+The filled-in settings can be seen in Figure 2.</p>
+<p><img src="../../images/KMeans/settings.png" alt="KMeans_settings"><br><em>Figure 2: K Means Clustering settings</em></p>
+<p>After executing the function, a new table will be pasted containing the (possibly scaled) coordinates and their computed cluster (Figure 3).</p>
+<p><img src="../../images/KMeans/clustering_head.png" alt="KMeans_clustering_head"><br><em>Figure 3: First entries from the K Means Clustering result</em></p>
+<p>Luckily, the Iris data set also provides information on the actual species of each measurement.
+This gives us the chance to check the accuracy of the algorithm for the underlying data set and clustering settings.
+134 of 150 data points were classified correctly, which corresponds to an accuracy of about 89.3%.</p>
+<h2 id="settings">Settings</h2>
+<p>To apply the clustering to your data, the <code>KMEANS</code> function requires two compulsory and three optional parameters.
+The compulsory parameters consist of:</p>
+<ul>
+<li><code>Input range</code> specifies the range of Excel cells, that your data uses. 
+Note, that the header (top row containing the column names) should <strong>not</strong> be included. </li>
+<li><code>Number of clusters</code> is the number of clusters, that you expect. </li>
+</ul>
+<p>Each cluster has a centroid, which can be thought of as the center of mass of the data points assigned to the respective cluster.</p>
+<p>To prevent data attributes with big absolute values overweighing other attributes, applying a transformation to preprocess the data might make sense.</p>
+<ul>
+<li><p><code>Transformation</code> </p>
+<ul>
+<li>0 will perform the algorithm on the raw data</li>
+<li>1 will apply the gaussian normalization by subtracting the data by its mean and diving it by the standard deviation.</li>
+<li>2 will apply the min-max normalization by subtracting the data by its minimum value and diving it by the min-max spread.</li>
+</ul>
+</li>
+<li><p><code>Iterations</code> specifies the number of steps, that will be performed, the default is 50.
+For larger data sets, usually more steps are required, however, the runtime might noticeably increase.</p>
+</li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Created by <a href="https://www.rivacon.com/"><strong>RIVACON</strong></a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

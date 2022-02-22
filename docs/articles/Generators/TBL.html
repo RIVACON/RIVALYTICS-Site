@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  {% comment -%}Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE file in the project root for full license information.{% endcomment -%}
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    {%- if title and _appTitle -%}
+    <title>TBL | </title>
+    <meta name="title" content="TBL | ">
+    {%- else -%}
+      {%- if title or _appTitle -%}
+    <title>TBL</title>
+    <meta name="title" content="TBL">
+      {%- endif -%}
+    {%- endif -%}
+    <meta name="viewport" content="width=device-width">
+    <meta name="generator" content="docfx 2.58.9.0">
+    {%- if _description -%}
+    <meta name="description" content="">
+    {%- endif -%}
+    {%- if _appFaviconPath -%}
+    <link rel="shortcut icon" href="../../">
+    {%- else -%}
+    <link rel="shortcut icon" href="../../favicon.ico">
+    {%- endif -%}
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    {%- if _noindex -%}
+    <meta name="searchOption" content="noindex">
+    {%- endif -%}
+    {%- if _enableSearch -%}
+    <meta property="docfx:rel" content="../../">
+    {%- endif -%}
+    {%- if _enableNewTab -%}
+    <meta property="docfx:newtab" content="true">
+    {%- endif -%}
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="" width="50" height="50">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="tbl">TBL</h1>
+
+<h5 id="summary-of-tables-and-schemas">Summary of tables and schemas</h5>
+<p>The TBL generator is used to create an overview of the tables in a database or schema. 
+It may be used directly as a worksheet function. 
+Rather than doing this, we suggest using the TBL dialog from the menu bar, especially when using this function for the first time.</p>
+<p><img src="../../images/TBL/nav.png" alt="TBL_ribbon"><br><em>Figure 1: location of the TBL ribbon</em></p>
+<h2 id="example">Example</h2>
+<p>Consider the database of a retailer with two entities: <code>purchases</code> and <code>customers</code>. 
+<code>purchases</code> consists of four columns and five rows while <code>customers</code> only has two of each. 
+This is demonstrated in the below example.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="../../images/TBL/purchases.png" alt="TBL_purchases"></th>
+<th style="text-align:center"><img src="../../images/TBL/customers.png" alt="TBL_customers"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><em>Table 1: purchases</em></td>
+<td style="text-align:center"><em>Table 2: customers</em></td>
+</tr>
+</tbody>
+</table>
+<p>The TBL generator creates an overview of the size of each table inside of this database. 
+This overview contains:</p>
+<ul>
+<li><code>TABLE_NAME</code>, the name of each table</li>
+<li><code>NUM_ROWS</code>, the number of rows in the table</li>
+<li><code>NUM_COLS</code>, the number of columns in the table  </li>
+</ul>
+<p>Therefore, if applying the generated SQL query to our example, it produces the below table as output.</p>
+<p><img src="../../images/TBL/result.png" alt="TBL_result"><br><em>Table 3: Executed TBL</em></p>
+<h2 id="settings">Settings</h2>
+<p>The only setting needed to use the TBL generator is the selection of a database or schema. 
+Make sure, that you have selected the correct connection in the <code>Connection Overview</code> panel (see [link: Connection Overview User Guide]). 
+If TBL should only be applied to all tables in a schema of our database, we can select the lower option &quot;All accessible tables in schema&quot; and choose the schema.</p>
+<p><img src="../../images/TBL/settings.png" alt="TBL_settings">
+<em>Figure 1: TBL settings</em></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Created by <a href="https://www.rivacon.com/"><strong>RIVACON</strong></a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

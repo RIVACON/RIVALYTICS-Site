@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  {% comment -%}Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE file in the project root for full license information.{% endcomment -%}
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    {%- if title and _appTitle -%}
+    <title>EasySQL | </title>
+    <meta name="title" content="EasySQL | ">
+    {%- else -%}
+      {%- if title or _appTitle -%}
+    <title>EasySQL</title>
+    <meta name="title" content="EasySQL">
+      {%- endif -%}
+    {%- endif -%}
+    <meta name="viewport" content="width=device-width">
+    <meta name="generator" content="docfx 2.58.9.0">
+    {%- if _description -%}
+    <meta name="description" content="">
+    {%- endif -%}
+    {%- if _appFaviconPath -%}
+    <link rel="shortcut icon" href="../../">
+    {%- else -%}
+    <link rel="shortcut icon" href="../../favicon.ico">
+    {%- endif -%}
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    {%- if _noindex -%}
+    <meta name="searchOption" content="noindex">
+    {%- endif -%}
+    {%- if _enableSearch -%}
+    <meta property="docfx:rel" content="../../">
+    {%- endif -%}
+    {%- if _enableNewTab -%}
+    <meta property="docfx:newtab" content="true">
+    {%- endif -%}
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="" width="50" height="50">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="easysql">EasySQL</h1>
+
+<h5 id="custom-sql-queries">Custom SQL queries</h5>
+<p>EasySQL allows the user to execute custom SQL queries, that cannot be created with any generator. 
+It is also possible to execute a <code>=SQL(...)</code> command inside a cell, but the editor provides much more space to type as well as autocompletion and the &quot;Connection Overview&quot;. 
+For custom SQL queries, the EasySQL form is therefore recommended.</p>
+<p><img src="../../images/easySQL/nav.png" alt="EasySQL_ribbon"><br><em>Figure 1: location of the EasySQL ribbon</em></p>
+<p>Using EasySQL requires knowledge about SQL queries. 
+Keep in mind, that the syntax must be adjusted based on the type of database. 
+This is demonstrated in the following example.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="../../images/easySQL/example_1.png" alt="EasySQL_result"></th>
+<th style="text-align:center"><img src="../../images/easySQL/example_2.png" alt="EasySQL_result"></th>
+<th style="text-align:center"><img src="../../images/easySQL/example_3.png" alt="EasySQL_result"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><em>Figure 1: Excel Workbook</em></td>
+<td style="text-align:center"><em>Figure 2: DB2zOS, SQLServer</em></td>
+<td style="text-align:center"><em>Figure 3: Oracle, PostrgeSQL, DB2</em></td>
+</tr>
+</tbody>
+</table>
+<p>When applying queries to data saved in Oracle, PostgreSQL, or IBM DB2, you can use the plain SQL syntax.
+However, there are still minor differences between the three database management systems.
+For IBM DB2zOS and SQLServer, tables must be referenced between square brackets <code>[]</code>.
+Additionally to the brackets, excel demands the use of a <code>$</code> sign after the table name.</p>
+<h2 id="example">Example</h2>
+<p>Consider the database of a retailer with an entity <code>purchases</code>, that stores the year, price, and the customer&#39;s id for every purchase. </p>
+<p><img src="../../images/easySQL/purchases.png" alt="EasySQL_purchases"><br><em>Table 1: Purchases</em></p>
+<p>We would like to find out how much each customer paid in 2021. 
+Below is an example of the corresponding query&#39;s syntax for every one of our supported database management systems. </p>
+<p><img src="../../images/easySQL/result.png" alt="EasySQL_result"><br><em>Table 2: Executed query</em></p>
+<h2 id="worksheet-function">Worksheet function</h2>
+<p>The execution of custom statements can not only be done from EasySQL but also our SQL worksheet function.
+Just like other common Excel worksheet functions like <code>SUM</code>, <code>IF</code> or <code>UNIQUE</code>, it can be easily executed from a cell behind an <code>=</code> sign.
+As in the graphical interface, it needs to be given a real or a dummy connection (see &quot;Dummy Connections&quot; in the chapter on the &quot;Connection Manager&quot;) and a query.</p>
+<p>Please make sure not to leave important information in the cells below and to the right of the cell, you would like to execute <code>SQL</code>.
+They might be overwritten by the table, which will be inserted into your worksheet.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Created by <a href="https://www.rivacon.com/"><strong>RIVACON</strong></a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
