@@ -89,10 +89,9 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="fld">FLD</h1>
 
-<h5 id="detection-of-invalid-or-suspicious-entries">Detection of invalid or suspicious entries</h5>
-<p>It is common for attributes to only allow a limited range of entries. 
-The FLD generator can be used to detect values, that violate these rules or conventions. 
-It may be used directly as a worksheet function. 
+<p>It is common for attributes to only allow a limited range of values. 
+The FLD generator can be used to detect invalid or suspicious values, that violate these rules or conventions. 
+It may be used directly as a worksheet function <code>=FLD()</code>. 
 Rather than doing this, we suggest using the FLD dialog from the menu bar, especially when using this function for the first time.</p>
 <p><img src="../../images/FLD/nav.png" alt="FLD_ribbon"><br><em>Figure 1: location of the FLD ribbon</em></p>
 <h2 id="example">Example</h2>
@@ -111,7 +110,7 @@ However, one entry in the below example is a mistake. </li>
 <p><img src="../../images/FLD/purchases.png" alt="FLD_purchases"><br><em>Table 1: purchases</em></p>
 <p>We may perform checks for an entire table or a defined subset thereof. 
 For instance, in the above example, we may only care about purchases made in 2021. 
-The pattern can account for that via the SCOPE parameter and limit the search for violations to that scope. </p>
+The framework can account for that via the <code>scope</code> parameter and limit the search for violations to that scope. </p>
 <table>
 <thead>
 <tr>
@@ -129,15 +128,15 @@ The pattern can account for that via the SCOPE parameter and limit the search fo
 </tbody>
 </table>
 <h2 id="settings">Settings</h2>
-<p>The pattern is instantiated via five parameters, two related to the selection of the table and three to specify the FLD command.
+<p>The FLD generator has five input parameters, two related to the selection of the table and three to specify the FLD command.
 The table is defined via: </p>
 <ul>
-<li>the <code>schema</code><br>(providing for databases where identically named tables may exist in different schemas)</li>
+<li>the <code>schema</code> (providing for databases where identically named tables may exist in different schemas)</li>
 <li>the <code>table</code></li>
 </ul>
 <p>The third parameter specifies which attributes should be shown in the output table:</p>
 <ul>
-<li>the <code>attribute</code><br>(multiple attributes can be used)</li>
+<li>the <code>attribute</code> (multiple attributes can be used)</li>
 </ul>
 <p>Defining the FLD operation is done with the remaining two parameters </p>
 <ul>

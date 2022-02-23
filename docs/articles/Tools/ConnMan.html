@@ -89,45 +89,44 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="connection-manager">Connection Manager</h1>
 
-<h5 id="connecting-external-databases-and-workbooks">Connecting external databases and workbooks</h5>
-<p>With the Connection Manager, it is possible to establish a connection to different types of databases and external workbooks.</p>
+<p>With the Connection Manager, it is possible to establish, customize and manage connections to different types of databases and external workbooks.</p>
 <p><img src="../../images/ConnMan/nav.png" alt="ConnMan_ribbon"><br><em>Figure 1: Navigation to the Connection Manager</em> </p>
 <h2 id="overview">Overview</h2>
 <p><img src="../../images/ConnMan/overview.png" alt="ConnMan_overview"><br><em>Figure 2: Connection Manager Overview</em> </p>
 <p>The &quot;Active Connections&quot; section gives an overview of all connections. 
-To use a data source for a query, reference its CONNECTION ID. 
-Therefore, Connection IDs may not be used twice. </p>
+To use a data source for a query, reference its &quot;Connection ID&quot;. 
+The Connection ID must be chosen by the user when setting up a new database connection. Please note, it must be unique since it serves as the main connection identifier for <strong>RIVALYTICS</strong>.</p>
 <h3 id="dummy-connections">Dummy Connections</h3>
-<p>To use worksheet functions, you always have to specify a data source. 
-To still have the option of generating queries, we integrated so-called &quot;dummy connections&quot;. 
-They make it possible to create SQL queries with our generators for any database type without being connected to any source.</p>
+<p>When using any of the SQL Generators worksheet functions, you always have to specify a data source via the connection ID. 
+To still have the option of generating queries while not being connected to an actual database, we integrated so-called &quot;dummy connections&quot;. 
+Dummy Connections basically only specify a database type and make it possible to create SQL queries with the desired syntax.</p>
 <p>Dummy connections can be accessed by a <code>//</code> combined with the name of a data source type. 
-So instead of choosing <code>Postgres</code> or <code>IMB</code> (see Figure 2), you can create the same query with <code>//PostgreSQL</code> or <code>//DB2</code> as the connection id as in Figure 3. 
+So instead of choosing the connection ID <code>Postgres</code> or <code>IMB</code> (see Figure 2), you can create the same query with <code>//PostgreSQL</code> or <code>//DB2</code> as the connection id as in Figure 3. 
 This feature is only available for the worksheet functions: </p>
 <p><img src="../../images/ConnMan/dummy_example.png" alt="ConnMan_dummy_example"><br><em>Figure 3: Example of a dummy connection for PostgreSQL</em> </p>
 <h2 id="manage-connections">Manage Connections</h2>
 <p>There are three buttons for manually editing the set of active connections. </p>
 <h4 id="add">Add</h4>
-<p>If you would like to add a new ODBC connection, please make sure, that you can find it in the &quot;ODBC data sources&quot; manager in windows. 
+<p>If you would like to add a new connection using ODBC, please make sure you have set up everything correctly in the &quot;ODBC data sources&quot; manager in Windows. 
 After pressing the <code>Add</code> button, you will see another window, which is shown below. 
-You can choose an arbitrary connection id, which will be later used to reference the data source in generators and worksheet functions.</p>
+You can choose an arbitrary connection ID, which will be later used to reference the data source in generators and worksheet functions.</p>
 <p><img src="../../images/ConnMan/add_odbc.png" alt="ConnMan_add_odbc"><br><em>Figure 4: &quot;Add new connection&quot; window for ODBC database</em> </p>
-<p>To add an Excel workbook as a data source, simply choose a connection id and input its path. 
-Note, that the workbook must be saved either locally or in OneDrive. 
-Other Cloud services are not supported in this version of RIVALYTICS.</p>
+<p>To add an Excel workbook as a data source, simply choose a connection ID and its location. 
+Please note, the chosen workbook must be saved either locally or in OneDrive. 
+Other Cloud services beside OneDrive are not supported in this version of RIVALYTICS.</p>
 <p><img src="../../images/ConnMan/add_excel.png" alt="ConnMan_add_excel"><br><em>Figure 5: &quot;Add new connection&quot; window for Excel database</em> </p>
 <h4 id="edit">Edit</h4>
 <p>To edit a connection, the windows from Figures 3 and 4 will appear again to make modifications. 
 You can edit every connection except for &quot;ThisWorkbook&quot;.</p>
 <h4 id="delete">Delete</h4>
-<p>Once a data source is not necessary anymore, you can select it by clicking on the connection in the &quot;Active connections&quot; overview and pressing the <code>Delete item</code> button to remove it from the list.</p>
+<p>Once a data source is not needed anymore, you can select it by clicking on the connection in the &quot;Active connections&quot; overview and pressing the <code>Delete item</code> button to remove it from the list.</p>
 <h4 id="test">Test</h4>
 <p>If a connection cannot be established, the column &quot;Connection Test Successful&quot; in the &quot;Active connections&quot; overview will show <code>FALSE</code>.
-To perform the connection test one again, press the &quot;Test connection&quot; button.</p>
+To perform the connection test once again, press the &quot;Test connection&quot; button.</p>
 <h2 id="save-connections">Save Connections</h2>
 <p>With the &quot;Save as&quot; and &quot;Load&quot; buttons, you can manage connections a lot quicker. </p>
 <h4 id="save">Save</h4>
-<p>To save every connection in an encrypted file, you will need to select a path for the file and a password, which has to contain at least:</p>
+<p>To save every connection in an encrypted file, you will need to select a saving location for the file and a master password, which has to contain at least:</p>
 <ul>
 <li>8 characters </li>
 <li>one uppercase letter</li>
@@ -136,7 +135,7 @@ To perform the connection test one again, press the &quot;Test connection&quot; 
 <li>one special character (e.g. <code>!</code>, <code>?</code>, <code>$</code>, <code>&amp;</code> etc.)</li>
 </ul>
 <h4 id="load">Load</h4>
-<p>To load the file with the saved connections, simply select it from your local storage and decrypt it with your chosen password to load the databases.</p>
+<p>To load the file with the saved connections, simply select it from your local storage and decrypt it with your chosen master password.</p>
 </article>
           </div>
           

@@ -89,10 +89,9 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="val">VAL</h1>
 
-<h5 id="identification-of-significant-quantitative-changes">Identification of significant quantitative changes</h5>
-<p>The VAL generator is used to detect noticeable changes in data. 
+<p>The VAL generator generates a SQL query that identifies significant quantitative changes in values when executed.
 This can be useful for detecting possible errors or outliers.</p>
-<p>The VAL generator may be used directly as a worksheet function. 
+<p>The VAL generator may be used directly as a worksheet function <code>=VAL()</code>. 
 Rather than doing this, we suggest using the VAL dialog from the menu bar, especially when using this function for the first time.</p>
 <p><img src="../../images/VAL/nav.png" alt="VAL_ribbon"><br><em>Figure 1: location of the VAL ribbon</em> </p>
 <h2 id="example">Example</h2>
@@ -104,7 +103,7 @@ We are interested in how much the total purchase value of each customer changed 
 <ul>
 <li><code>DELTA</code>, the difference between the new and the old entry</li>
 <li><code>ABSDELTA</code>, the absolute value of <code>DELTA</code></li>
-<li><code>RELDELTA</code>, the percentage change between the new and the old entry</li>
+<li><code>RELDELTA</code>, the relative (percentage) change between the new and the old entry</li>
 <li><code>ABSRELDELTA</code>, the absolute value of <code>RELDELTA</code></li>
 </ul>
 <p>For example, if we would like to find every customer, whose purchase value decreased by more than 100, our threshold would be <code>DELTA</code> &lt; -100. 
@@ -114,13 +113,12 @@ Table 2 shows every customer, whose total purchase value has dropped by more tha
 <p>While the query in Table 2 focuses on absolute change, the following one addresses relative change, which can be equally useful. </p>
 <p><img src="../../images/VAL/result_2.png" alt="VAL_result_2"><br><em>Table 3: Executed VAL for ABSRELDELTA &gt; 2</em></p>
 <h2 id="settings">Settings</h2>
-<p>The pattern is instantiated via twelve parameters, five related to the source (the outdated table), five to the target (the updated table), and another two specify the quantitative change we are looking for. 
-It is important, that changes happen from the source to the target table. 
-Therefore, if using VAL for changes in time, the source can be seen as the outdated, and the target as the updated data.
+<p>The VAL generator has twelve input parameters, five related to the source (the outdated table), five to the target (the updated table), and another two specify the quantitative change we are looking for. 
+Important note: the used metrics are &quot;directional&quot;, i.e. changes happen <strong>from</strong> the source <strong>to</strong> the target table. 
+Therefore, if using VAL to detect changes over time, the source can be seen as the outdated, and the target as the updated data.
 The source and target are each defined via two parameters: </p>
 <ul>
-<li>the <code>source schema</code> / <code>target schema</code>
-(providing for databases where identically named tables may exist in different schemas)</li>
+<li>the <code>source schema</code> / <code>target schema</code> (providing for databases where identically named tables may exist in different schemas)</li>
 <li>the <code>source table</code> / <code>target table</code></li>
 </ul>
 <p>The third parameter is the attribute to group the source and target table by. </p>

@@ -89,45 +89,45 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="sql-generators">SQL Generators</h1>
 
-<p>Our SQL generators produce queries for common problem settings to save time when working with databases.
-They are available as an easy-to-use graphical interface and a worksheet function, which can be executed directly from a cell.</p>
-<h2 id="visual-interface">Visual interface</h2>
-<p>For every generator, the user interface is structured similarly.
-It consists of a Connection Overview, the generator&#39;s settings, a Query Editor, and the Control Panel (see Figure 1 below).</p>
+<p>When working with large data sets, one often deals with the same recurring data quality issues. 
+Therefore, <strong>RIVACON</strong> has developed 8 parameterizable, SQL-generating frameworks that tackle the core of these data quality problems and make your life easier.
+Every SQL Generator serves a certain purpose and outputs a SQL query, which - when executed - identifies a certain lack of data quality inherent in your data set.
+Additionally, each SQL Generator is available as an easy-to-use graphical user interface for an easier parametrization.</p>
+<h2 id="user-interface">User interface</h2>
+<p>For each generator, the user interface is structured similarly.
+It consists of a Connection Overview, the generator&#39;s settings, a Query Editor, and the Control Panel (see Figure 1 below). 
+For distinctive features of each generator, please refer to its main article on the left-hand side.</p>
 <p><img src="../../images/Gens/structure.png" alt="Gens_structure">
 <em>Figure 1: Generator structure</em></p>
-<p>We will look at each section one by one to get a deeper sense of their purpose.</p>
 <h3 id="connection-overview">Connection Overview</h3>
 <p>This overview simplifies work with multiple data sources. 
-To create a statement for the correct one, it has to be selected from the drop-down menu in the top left corner.
-Mind, that it might take a couple of seconds for your database to be loaded. 
-Once this is done, the schemas and tables with be listed in a &quot;tree-view&quot; structure to provide a better overview of your data.</p>
+The generated SQL query is always based on the database type of selected connection ID inside the drop-down menu in the top left corner.
+Please mind, that it might take a couple of seconds for the database structure to be loaded. 
+Once loaded, the schemas and tables are listed in a &quot;tree-view&quot; structure to provide a better overview of your database.</p>
 <h3 id="generator-settings">Generator settings</h3>
-<p>To create queries with the proper schema, table, and column names, it is necessary to first select them in the settings.
-As every generator creates a different type of query, this section is different for each case.
+<p>As each generator creates a different type of SQL query, the selectable settings/parameters also differ for each generator.
 For detailed explanations and examples, please select the respective generator in the table of contents on the left-hand side.
 After filling the compulsory fields (marked by an asterisk), press the &quot;Generate query&quot; button.</p>
 <h3 id="query-editor">Query Editor</h3>
 <p>To view the queries before executing them, they will appear in the Query Editor after pressing the &quot;Generate query&quot; button in the settings.
 More advanced users can also adjust the query when needed and will be assisted by syntax highlighting and text suggestions.</p>
 <h3 id="control-panel">Control Panel</h3>
-<p>The final step before receiving the resulting table is to specify the output details.
-By default, a new worksheet will be created with the new table in the top left corner. 
-However, you may also select an already existing worksheet and another cell to be the top left corner of the table.
-Mind, that if you overwrite data in another sheet with the resulting table, you will not be able to revert the changes.
-Therefore, make sure to be careful when selecting an existing sheet in the dropdown menu.</p>
-<p>Furthermore, you have the option to leave out the table&#39;s column names, also known as the header.
-&quot;Clearing Old Contents&quot; will delete every cell entry to the left and below your selected cell.</p>
+<p>Inside the Control Panel, you can specify output properties before executing the SQL Query shown in the Editor.
+By default, a new worksheet will be created inside your Excel workbook with the top left corner of yout output matrix starting in cell A1. 
+However, you may also select an already existing worksheet and another cell to be the top left corner of the output matrix.
+Please be aware, that by overwriting existing data with the output data of the executed query, you will not be able to revert the changes!
+Therefore, make sure to be careful when selecting an existing sheet as the output destination.</p>
+<p>Furthermore, you have the option to leave out the table&#39;s column names, also known as the headers.
+&quot;Clearing Old Contents&quot; will clear all (old) data existing to the right and below your selected output cell.</p>
 <h2 id="worksheet-functions">Worksheet functions</h2>
 <p>Another way of using the generators is to call them as worksheet functions. 
-As for popular Excel functions like <code>SUM</code>, <code>IF</code> or <code>UNIQUE</code>, simply typing the name of a generator behind an <code>=</code> sign will show the parameters (see Figure 2).</p>
+Analog to popular Excel functions like <code>SUM</code>, <code>IF</code> or <code>UNIQUE</code>, simply typing the name of a generator behind an <code>=</code> sign will show the parameters (see Figure 2).</p>
 <p><img src="../../images/Gens/ws_func.png" alt="Gens_ws_func">
 <em>Figure 2: Generator Worksheet functions</em></p>
-<p>Note, that executing a worksheet function will not execute the produced statement.
-Instead, the statement itself will be pasted into the respective cell. 
-To view the resulting table, it is necessary to use the generator inside a <code>SQL</code> worksheet function. 
+<p>Please note, by executing any SQL Generator as a worksheet function will only output the SQL query as a string but not execute the query itself.
+To execute the generated query, you&#39;ll need to wrap it with the <code>SQL()</code> function. 
 For example: <code>=SQL(&quot;YourConnectionID&quot;, DEF(...))</code>.</p>
-<p>Further information on the <code>SQL</code> Worksheet function can be found in the chapter on &quot;EasySQL&quot;.</p>
+<p>Further information on the <code>SQL()</code> Worksheet function can be found in the chapter on &quot;EasySQL&quot;.</p>
 </article>
           </div>
           

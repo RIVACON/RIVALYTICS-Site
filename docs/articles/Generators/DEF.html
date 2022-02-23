@@ -89,9 +89,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="def">DEF</h1>
 
-<h5 id="altered-object-definitions">Altered object definitions</h5>
-<p>The DEF generator is used to detect changes in numeric and non-numeric entries: i.e. instances, where there are two tables to check for specific differences.
-It may be used directly as a worksheet function. 
+<p>The DEF generator generates a SQL query which detects changes in definitions of numeric and non-numeric objects when executed.
+It may be used directly as a worksheet function <code>=DEF()</code>. 
 Rather than doing this, we suggest using the DEF dialog from the menu bar, especially when using this function for the first time.</p>
 <p><img src="../../images/DEF/nav.png" alt="DEF_ribbon"><br><em>Figure 1: location of the DEF ribbon</em> </p>
 <h2 id="example">Example</h2>
@@ -116,15 +115,14 @@ To identify such changes in large databases, we can use DEF.</p>
 </table>
 <p>We may search for changed object definitions in an entire table or a defined subset thereof. 
 For instance, in the above example, we may only care about customer IDs 2 and below. 
-The pattern can account for that via the <code>scope</code> parameter and limit the search for violations to that scope. 
+The framework can account for that via the <code>scope</code> parameter and limit the search for violations to that scope. 
 As a result, only the reference to the customer with ID = 1 and ID = 2 would be reported, as shown below: </p>
 <p><img src="../../images/DEF/result.png" alt="DEF_result"><br><em>Table 3: executed DEF</em> </p>
 <h2 id="settings">Settings</h2>
-<p>The pattern is instantiated via eleven parameters, five related to the source (the outdated table), five to the target (the updated table), and one to the attribute, which will be shown in the resulting table.
+<p>The DEF generator has eleven input parameters, five related to the source (the outdated table), five to the target (the updated table), and one to the attribute, which will be shown in the resulting table.
 The source and target are each defined via two parameters: </p>
 <ul>
-<li>the <code>source schema</code>  / <code>target schema</code> 
-(providing for databases where identically named tables may exist in different schemas)</li>
+<li>the <code>source schema</code>  / <code>target schema</code> (providing for databases where identically named tables may exist in different schemas)</li>
 <li>the <code>source table</code> / <code>target table</code></li>
 </ul>
 <p>The third parameter specifies the common key in both tables to be able to link the entries:</p>

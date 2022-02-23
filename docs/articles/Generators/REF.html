@@ -89,18 +89,17 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="ref">REF</h1>
 
-<h5 id="violation-of-referential-identity">Violation of referential identity</h5>
-<p>The REF generator is used to detect referential integrity violations: 
-i.e. instances, where an attribute in one table is a reference to an entry in a second table, and that entry does not exist. </p>
-<p>The REF generator may be used directly as a worksheet function. 
+<p>The REF generator generates a SQL query which detects violations of referential identity. 
+That means it detects instances, where an attribute in table A is a reference to a data record in table B, but the referenced record of table B does not exist. </p>
+<p>The REF generator may be used directly as a worksheet function <code>=REF()</code>. 
 Rather than doing this, we suggest using the REF dialog from the menu bar, especially when using this function for the first time.  </p>
 <p><img src="../../images/REF/nav.png" alt="REF_ribbon"><br><em>Figure 1: location of the REF ribbon</em></p>
 <h2 id="example">Example</h2>
-<p>Consider the database of a retailer with two entities: PURCHASES and CUSTOMERS. 
-An attribute of each purchase is the id of the customer who carried it out. 
-If a referenced customer does not exist, referential integrity is violated. 
+<p>Consider the database of a retailer with two entities: <code>purchases</code> and <code>customers</code>. 
+An attribute of each purchase is the <code>customer_id</code> of who carried it out. 
+If a referenced customer does not exist in the <code>customers</code> table, referential integrity is violated. 
 This is demonstrated in the below example. 
-We see that purchases 1 and 3 are linked to a customer that is not listed. </p>
+We see that purchases 1 and 3 (marked red) are linked to a customer that is not listed in the <code>customers</code> table. </p>
 <table>
 <thead>
 <tr>
@@ -117,15 +116,14 @@ We see that purchases 1 and 3 are linked to a customer that is not listed. </p>
 </table>
 <p>We may check referential integrity for an entire table or a defined subset thereof. 
 For instance, in the above example, we may only care about purchases made in 2021. 
-The pattern can account for that via the SCOPE parameter and limit the search for violations to that scope.
-As a result, only the reference to the customer with ID = 5 would be reported, as shown below: </p>
-<p><img src="../../images/REF/executed.png" alt="REF_executed"><br><em>Table 3: Executed REF generator</em></p>
+The framework can account for that via the SCOPE parameter and limit the search for violations to that scope.
+As a result, only the <code>customer_id = 5</code> would be reported, as shown below: </p>
+<p><img src="../../images/REF/executed.png" alt="REF_executed"><br><em>Table 3: Executed SQL query of the REF generator with scope restriction to year = 2021</em></p>
 <h2 id="settings">Settings</h2>
-<p>The pattern is instantiated via eight parameters, four related to the source (the referencing table) and four to the target (the referenced table).
-The source and target are each defined via two parameters:  </p>
+<p>The REF generator has eight parameters, four related to the source (the referencing table) and four to the target (the referenced table).
+The source and target tables are each defined via two parameters:  </p>
 <ul>
-<li>the <code>source schema</code> / <code>target schema</code>
-(providing for databases where identically named tables may exist in different schemas)</li>
+<li>the <code>source schema</code> / <code>target schema</code> (providing for databases where identically named tables may exist in different schemas)</li>
 <li>the <code>source table</code> / <code>target table</code> </li>
 </ul>
 <p>The third parameter specifies the referencing and referenced keys, respectively:</p>
@@ -133,14 +131,12 @@ The source and target are each defined via two parameters:  </p>
 <li>the <code>source foreign key</code> is the referencing key of the source table</li>
 <li>the <code>target unique key</code> is the referenced key of the target table, where it must be unique  </li>
 </ul>
-<p>When either key is a compound key, the attributes it is composed of are specified as a comma-separated list.
-The fourth parameter defines the scope, i.e. the subset of the source / target tables to be included in the check:</p>
+<p>When either key is a compound key, the attributes it is composed of must be specified as a comma-separated list.
+The last parameters define the scope, i.e. the subset of the source / target tables to be included in the check:</p>
 <ul>
 <li>the <code>source scope</code> defines the subset of the referencing table to be included in the check </li>
 <li>the <code>target scope</code> defines the subset of the referenced table to be included in the check  </li>
 </ul>
-<p>The SCOPE is specified in the syntax of an SQL &quot;where clause&quot;. It is an optional parameter. 
-When left blank, the scope is the entire table. </p>
 <p>In the below screenshot, we illustrate how the parameters would be chosen to implement the example check described above. 
 We assume, that the data is stored in an Excel workbook &quot;Test_Data.xlsx&quot; with purchases stored in the worksheet &quot;Purchases&quot; and customers stored in a second worksheet named &quot;Customers&quot;. </p>
 <p><img src="../../images/REF/settings.png" alt="REF_settings"><br><em>Table 4: REF settings</em></p>

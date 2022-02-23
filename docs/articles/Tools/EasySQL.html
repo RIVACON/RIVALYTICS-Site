@@ -89,14 +89,17 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="easysql">EasySQL</h1>
 
-<h5 id="custom-sql-queries">Custom SQL queries</h5>
-<p>EasySQL allows the user to execute custom SQL queries, that cannot be created with any generator. 
-It is also possible to execute a <code>=SQL(...)</code> command inside a cell, but the editor provides much more space to type as well as autocompletion and the &quot;Connection Overview&quot;. 
-For custom SQL queries, the EasySQL form is therefore recommended.</p>
+<p>Rather than using the <code>=SQL(...)</code> worksheet function inside a cell, EasySQL is the convenvient and user-friendly way to write and execute SQL queries with <strong>RIVALYTICS</strong>.
+It offers syntax highlighting and auto-completion while wirting queries as well as an overview of the selected connection in the &quot;Connection Overview&quot; section.</p>
 <p><img src="../../images/easySQL/nav.png" alt="EasySQL_ribbon"><br><em>Figure 1: location of the EasySQL ribbon</em></p>
 <p>Using EasySQL requires knowledge about SQL queries. 
-Keep in mind, that the syntax must be adjusted based on the type of database. 
+Keep in mind, that the syntax must be adjusted based on the database type that is currently selected/active. 
 This is demonstrated in the following example.</p>
+<h2 id="example">Example</h2>
+<p>Consider the database of a retailer with an entity <code>purchases</code>, that stores the year, price, and the customer&#39;s id for every purchase. </p>
+<p><img src="../../images/easySQL/purchases.png" alt="EasySQL_purchases"><br><em>Table 1: Purchases</em></p>
+<p>We would like to find out how much each customer paid in 2021. 
+Below is an example of the corresponding query&#39;s syntax for every one of our supported database management systems. </p>
 <table>
 <thead>
 <tr>
@@ -113,22 +116,17 @@ This is demonstrated in the following example.</p>
 </tr>
 </tbody>
 </table>
-<p>When applying queries to data saved in Oracle, PostgreSQL, or IBM DB2, you can use the plain SQL syntax.
-However, there are still minor differences between the three database management systems.
+<p>Oracle, PostgreSQL or IBM DB2 support &quot;plain&quot; SQL syntax with only minor differences between the three database management systems.
 For IBM DB2zOS and SQLServer, tables must be referenced between square brackets <code>[]</code>.
-Additionally to the brackets, excel demands the use of a <code>$</code> sign after the table name.</p>
-<h2 id="example">Example</h2>
-<p>Consider the database of a retailer with an entity <code>purchases</code>, that stores the year, price, and the customer&#39;s id for every purchase. </p>
-<p><img src="../../images/easySQL/purchases.png" alt="EasySQL_purchases"><br><em>Table 1: Purchases</em></p>
-<p>We would like to find out how much each customer paid in 2021. 
-Below is an example of the corresponding query&#39;s syntax for every one of our supported database management systems. </p>
+Additionally to the brackets, Excel demands the use of a <code>$</code> sign after the table name, due to its support of custom, user-specified ranges. 
+In the example above, by using <code>[purchases$]</code>, the whole worksheet &quot;purchases&quot; is used as a data table, while e.g. <code>[purchases$A1:C7]</code> limits the data table range from A1 to C7.</p>
 <p><img src="../../images/easySQL/result.png" alt="EasySQL_result"><br><em>Table 2: Executed query</em></p>
 <h2 id="worksheet-function">Worksheet function</h2>
-<p>The execution of custom statements can not only be done from EasySQL but also our SQL worksheet function.
+<p>The execution of SQL statements can not only be done through EasySQL but also through the &#39;SQL()&#39; worksheet function.
 Just like other common Excel worksheet functions like <code>SUM</code>, <code>IF</code> or <code>UNIQUE</code>, it can be easily executed from a cell behind an <code>=</code> sign.
-As in the graphical interface, it needs to be given a real or a dummy connection (see &quot;Dummy Connections&quot; in the chapter on the &quot;Connection Manager&quot;) and a query.</p>
-<p>Please make sure not to leave important information in the cells below and to the right of the cell, you would like to execute <code>SQL</code>.
-They might be overwritten by the table, which will be inserted into your worksheet.</p>
+As in the graphical interface, it needs to be given a real or a dummy connection ID (see &quot;Dummy Connections&quot; in the chapter on the &quot;Connection Manager&quot;) and a query.</p>
+<p>Please make sure not to leave important information in the cells below and to the right of the cell executing the &#39;SQL()&#39; function.
+They might be overwritten by the output table of &#39;SQL()&#39;, which will be inserted into your worksheet.</p>
 </article>
           </div>
           

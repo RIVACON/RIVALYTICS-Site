@@ -89,10 +89,9 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="set">SET</h1>
 
-<h5 id="comparing-tables-with-set-operations">Comparing tables with set operations</h5>
-<p>The SET generator is used to apply common set operations to tables. 
+<p>The SET generator generates a SQL query that compares tables with set operations when executed. 
 It can be used, for instance, to compare the set of objects in different versions of the same table (e.g. in test vs. production) or the sets of objects within different subsets (scopes) of the same table. </p>
-<p>The SET generator may be used directly as a worksheet function. 
+<p>The SET generator may be used directly as a worksheet function <code>=SET()</code>. 
 Rather than doing this, we suggest using the SET dialog from the menu bar, especially when using this function for the first time.</p>
 <p><img src="../../images/SET/nav.png" alt="SET_ribbon"><br><em>Figure 1: location of the SET ribbon</em></p>
 <h2 id="example">Example</h2>
@@ -122,7 +121,7 @@ The generator may be used to create three distinct result sets:</p>
 </ul>
 <p>We may configure the generator so that only one of the three sets is returned, or all three (<code>ALL</code>) or all except for the intersect (<code>EXCEPT</code>). 
 As a result, there are five output modes to choose from. 
-The output generated under the five different modes is illustrated below using the CUSTOMER2020 and CUSTOMER2021 datasets introduced above.</p>
+The output generated under the five different modes is illustrated below using the <code>customers2020</code> and <code>customers2021</code> datasets introduced above.</p>
 <table>
 <thead>
 <tr>
@@ -154,17 +153,14 @@ The output generated under the five different modes is illustrated below using t
 </tbody>
 </table>
 <h2 id="settings">Settings</h2>
-<p>The pattern is instantiated via eight parameters, four related to the source and four to the target. 
+<p>The SET generator has eight input parameters, four related to the source and four to the target. 
 The source and target are each defined via two parameters: </p>
 <ul>
-<li><p>the <code>source schema</code> / <code>target schema</code>
-(providing for databases where identically named tables may exist in different schemas)  </p>
-</li>
-<li><p>the <code>source table</code> / <code>target table</code>  </p>
-</li>
+<li>the <code>source schema</code> / <code>target schema</code> (providing for databases where identically named tables may exist in different schemas)  </li>
+<li>the <code>source table</code> / <code>target table</code>  </li>
 </ul>
-<p>Note that the source and target may be identical.
-In this case, one would use different SCOPES to differentiate source and target sets (see below).  </p>
+<p>Please note, source and target may be identical.
+In this case, one would use different <code>scopes</code> to differentiate source and target sets (see below).  </p>
 <p>The third parameter defines the object to be compared:</p>
 <ul>
 <li>the <code>source object</code> / <code>target object</code>   </li>

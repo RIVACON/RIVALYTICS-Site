@@ -6,12 +6,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     {%- if title and _appTitle -%}
-    <title>2D K Means Clustering | </title>
-    <meta name="title" content="2D K Means Clustering | ">
+    <title>2D K-Means Clustering | </title>
+    <meta name="title" content="2D K-Means Clustering | ">
     {%- else -%}
       {%- if title or _appTitle -%}
-    <title>2D K Means Clustering</title>
-    <meta name="title" content="2D K Means Clustering">
+    <title>2D K-Means Clustering</title>
+    <meta name="title" content="2D K-Means Clustering">
       {%- endif -%}
     {%- endif -%}
     <meta name="viewport" content="width=device-width">
@@ -87,14 +87,13 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="2d-k-means-clustering">2D K Means Clustering</h1>
+<h1 id="2d-k-means-clustering">2D K-Means Clustering</h1>
 
-<h5 id="locate-and-visualize-clusters-in-2d-data">Locate and visualize clusters in 2D data</h5>
 <p>The function <code>KMEANS2D</code> serves as an addition to the regular <code>KMEANS</code>. 
 It can only be applied to 2-dimensional data and can show you a plot of the results.
-This article builds on the previous guide on the regular &quot;K Means Clustering&quot;. 
+This article builds on the previous guide on the regular &quot;K-Means Clustering&quot;. 
 We recommend reading the other article before proceeding with the current one.
-The reason for a separate K Means Clustering function for two dimensions is, that diagrams can be created in 2D.</p>
+The reason for a separate K-Means Clustering function for two dimensions is, that diagrams can be created in 2D.</p>
 <h2 id="example">Example</h2>
 <p>Once again, we are using the Iris flower data set.
 As we might have noticed from the pair plots below, the petal measurements have more predictive value as clusters can be observed in Figure 3.
@@ -120,7 +119,7 @@ The number of clusters can also stay as 3 because we still have three species as
 We would like to plot a diagram of the found clusters, therefore the next parameter will be set to 1.
 &quot;Iris petal clustering&quot; will be shown as the title of the plot and the cluster visibility is set to 1.
 The last two parameters are set to the default values as in the previous article.</p>
-<p><img src="../../images/KMeans2D/settings.png" alt="KMeans2D_settings"><br><em>Figure 3: 2D K Means Clustering settings</em></p>
+<p><img src="../../images/KMeans2D/settings.png" alt="KMeans2D_settings"><br><em>Figure 3: 2D K-Means Clustering settings</em></p>
 <p>After executing the function, a new table will be pasted containing the (possibly scaled) coordinates and their computed cluster (Figure 5).</p>
 <p><img src="../../images/KMeans2D/clustering_head.png" alt="KMeans2D_clustering_head"><br><em>Figure 5: First entries from the K Means Clustering result</em></p>
 <h2 id="settings">Settings</h2>
